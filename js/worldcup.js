@@ -118,8 +118,8 @@ var linearScale = function () { return 136; },
     inverseLinearScale = function () { return 136; };
 
 // Data process
-queue().defer(d3.json, "map.json")
-  .defer(d3.json, "poi.json")
+queue().defer(d3.json, "data/map.json")
+  .defer(d3.json, "data/poi.json")
   .awaitAll(function(error, json) {
     var tiles = tile();
     // Background local Tiles
@@ -277,7 +277,7 @@ var bpMenu = function(selector, data) {
   return menu;
 };
 var menu = {};
-queue().defer(d3.json, "teams.json")
+queue().defer(d3.json, "data/teams.json")
   .await(function(error, json) {
     var data = d3.keys(json)
       .sort(function(a, b) {
