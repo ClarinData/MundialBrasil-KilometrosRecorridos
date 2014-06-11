@@ -103,7 +103,7 @@ div.menuitem label:after {
 	height: 12pt;
 	margin-top: 2pt;
 	float: right;
-  	content: url(radio_unchecked.svg);
+  	content: url(../image/radio_unchecked.svg);
 }
 
 div#teamActive.menuitem label:after {
@@ -111,7 +111,7 @@ div#teamActive.menuitem label:after {
 	height: 12pt;
 	margin-top: 2pt;
 	float: right;
-  	content: url(radio_checked.svg);
+  	content: url(../image/radio_checked.svg);
 }
 
 .menuitem {
