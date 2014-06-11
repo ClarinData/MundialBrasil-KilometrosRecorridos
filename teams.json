@@ -1,0 +1,514 @@
+﻿{
+	"Argentina": {
+		"concentration" : "Vespasiano",
+		"games": [{
+			"oponent": "Bosnia y Herzegovina",
+			"stadium": "Río de Janeiro",
+			"distance": 774
+		}, {
+			"oponent": "Irán",
+			"stadium": "Belo Horizonte",
+			"distance": 46
+		}, {
+			"oponent": "Nigeria",
+			"stadium": "Porto Alegre",
+			"distance": 2770
+		}]
+	},
+	"Bélgica": {
+		"concentration" : "Mogi Das Cruzes",
+		"games": [{
+			"oponent": "Argelia",
+			"stadium": "Belo Horizonte",
+			"distance": 1084
+		}, {
+			"oponent": "Rusia",
+			"stadium": "Río de Janeiro",
+			"distance": 772
+		}, {
+			"oponent": "Corea del Sur",
+			"stadium": "San Pablo",
+			"distance": 128
+		}]
+	},
+	"Argelia": {
+		"concentration" : "Sorocaba",
+		"games": [{
+			"oponent": "Bélgica",
+			"stadium": "Belo Horizonte",
+			"distance": 1180
+		}, {
+			"oponent": "Corea del Sur",
+			"stadium": "Porto Alegre",
+			"distance": 1930
+		}, {
+			"oponent": "Rusia",
+			"stadium": "Curitiba",
+			"distance": 882
+		}]
+	},
+	"Rusia": {
+		"concentration" : "Itu",
+		"games": [{
+			"oponent": "Corea del Sur",
+			"stadium": "Cuiabá",
+			"distance": 2596
+		}, {
+			"oponent": "Bélgica",
+			"stadium": "Río de Janeiro",
+			"distance": 906
+		}, {
+			"oponent": "Argelia",
+			"stadium": "Curitiba",
+			"distance": 802
+		}]
+	},
+	"Irán": {
+		"concentration" : "San Pablo",
+		"games": [{
+			"oponent": "Nigeria",
+			"stadium": "Curitiba",
+			"distance": 728
+		}, {
+			"oponent": "Argentina",
+			"stadium": "Belo Horizonte",
+			"distance": 958
+		}, {
+			"oponent": "Bosnia y Herzegovina",
+			"stadium": "Salvador (Bahia)",
+			"distance": 2906
+		}]
+	},
+	"Chile": {
+		"concentration" : "Belo Horizonte",
+		"games": [{
+			"oponent": "Australia",
+			"stadium": "Cuiabá",
+			"distance": 2788
+		}, {
+			"oponent": "España",
+			"stadium": "Río de Janeiro",
+			"distance": 786
+		}, {
+			"oponent": "Holanda",
+			"stadium": "San Pablo",
+			"distance": 1056
+		}]
+	},
+	"Nigeria": {
+		"concentration" : "Campinas",
+		"games": [{
+			"oponent": "Irán",
+			"stadium": "Curitiba",
+			"distance": 732
+		}, {
+			"oponent": "Bosnia y Herzegovina",
+			"stadium": "Cuiabá",
+			"distance": 2526
+		}, {
+			"oponent": "Argentina",
+			"stadium": "Porto Alegre",
+			"distance": 1780
+		}]
+	},
+	"España": {
+		"concentration" : "Curitiba",
+		"games": [{
+			"oponent": "Holanda",
+			"stadium": "Salvador (Bahia)",
+			"distance": 3650
+		}, {
+			"oponent": "Chile",
+			"stadium": "Río de Janeiro",
+			"distance": 1392
+		}, {
+			"oponent": "Australia",
+			"stadium": "Curitiba",
+			"distance": 36
+		}]
+	},
+	"Corea del Sur": {
+		"concentration" : "Foz de Iguazú",
+		"games": [{
+			"oponent": "Rusia",
+			"stadium": "Cuiabá",
+			"distance": 2248
+		}, {
+			"oponent": "Argelia",
+			"stadium": "Porto Alegre",
+			"distance": 1192
+		}, {
+			"oponent": "Bélgica",
+			"stadium": "San Pablo",
+			"distance": 1712
+		}]
+	},
+	"Grecia": {
+		"concentration" : "Aracaju",
+		"games": [{
+			"oponent": "Colombia",
+			"stadium": "Belo Horizonte",
+			"distance": 2438
+		}, {
+			"oponent": "Japón",
+			"stadium": "Natal",
+			"distance": 1214
+		}, {
+			"oponent": "Costa de Marfil",
+			"stadium": "Fortaleza",
+			"distance": 1648
+		}]
+	},
+	"Ghana": {
+		"concentration" : "Maceió",
+		"games": [{
+			"oponent": "EE.UU.",
+			"stadium": "Natal",
+			"distance": 854
+		}, {
+			"oponent": "Alemania",
+			"stadium": "Fortaleza",
+			"distance": 1454
+		}, {
+			"oponent": "Portugal",
+			"stadium": "Brasilia",
+			"distance": 3034
+		}]
+	},
+	"Colombia": {
+		"concentration" : "Cotia",
+		"games": [{
+			"oponent": "Grecia",
+			"stadium": "Belo Horizonte",
+			"distance": 992
+		}, {
+			"oponent": "Costa de Marfil",
+			"stadium": "Brasilia",
+			"distance": 1702
+		}, {
+			"oponent": "Japón",
+			"stadium": "Cuiabá",
+			"distance": 2656
+		}]
+	},
+	"Holanda": {
+		"concentration" : "Río de Janeiro",
+		"games": [{
+			"oponent": "España",
+			"stadium": "Salvador (Bahia)",
+			"distance": 2478
+		}, {
+			"oponent": "Australia",
+			"stadium": "Porto Alegre",
+			"distance": 2292
+		}, {
+			"oponent": "Chile",
+			"stadium": "San Pablo",
+			"distance": 726
+		}]
+	},
+	"Francia": {
+		"concentration" : "Ribeirão Preto",
+		"games": [{
+			"oponent": "Honduras",
+			"stadium": "Porto Alegre",
+			"distance": 2098
+		}, {
+			"oponent": "Suiza",
+			"stadium": "Salvador (Bahia)",
+			"distance": 2734
+		}, {
+			"oponent": "Ecuador",
+			"stadium": "Río de Janeiro",
+			"distance": 1026
+		}]
+	},
+	"Alemania": {
+		"concentration" : "Santo André",
+		"games": [{
+			"oponent": "Portugal",
+			"stadium": "Salvador (Bahia)",
+			"distance": 1444
+		}, {
+			"oponent": "Ghana",
+			"stadium": "Fortaleza",
+			"distance": 2828
+		}, {
+			"oponent": "EE.UU.",
+			"stadium": "Recife",
+			"distance": 2074
+		}]
+	},
+	"Ecuador": {
+		"concentration" : "Viamão",
+		"games": [{
+			"oponent": "Suiza",
+			"stadium": "Brasilia",
+			"distance": 3252
+		}, {
+			"oponent": "Honduras",
+			"stadium": "Curitiba",
+			"distance": 1116
+		}, {
+			"oponent": "Francia",
+			"stadium": "Río de Janeiro",
+			"distance": 2292
+		}]
+	},
+	"Bosnia y Herzegovina": {
+		"concentration" : "Guaruja",
+		"games": [{
+			"oponent": "Argentina",
+			"stadium": "Río de Janeiro",
+			"distance": 910
+		}, {
+			"oponent": "Nigeria",
+			"stadium": "Cuiabá",
+			"distance": 2892
+		}, {
+			"oponent": "Irán",
+			"stadium": "Salvador (Bahia)",
+			"distance": 3122
+		}]
+	},
+	"Inglaterra": {
+		"concentration" : "Río de Janeiro",
+		"games": [{
+			"oponent": "Italia",
+			"stadium": "Manaos",
+			"distance": 5736
+		}, {
+			"oponent": "Uruguay",
+			"stadium": "San Pablo",
+			"distance": 730
+		}, {
+			"oponent": "Costa Rica",
+			"stadium": "Belo Horizonte",
+			"distance": 724
+		}]
+	},
+	"Brasil": {
+		"concentration" : "Teresópolis",
+		"games": [{
+			"oponent": "Croacia",
+			"stadium": "San Pablo",
+			"distance": 850
+		}, {
+			"oponent": "México",
+			"stadium": "Fortaleza",
+			"distance": 4508
+		}, {
+			"oponent": "Camerún",
+			"stadium": "Brasilia",
+			"distance": 1998
+		}]
+	},
+	"Honduras": {
+		"concentration" : "Porto Feliz",
+		"games": [{
+			"oponent": "Francia",
+			"stadium": "Porto Alegre",
+			"distance": 1870
+		}, {
+			"oponent": "Ecuador",
+			"stadium": "Curitiba",
+			"distance": 822
+		}, {
+			"oponent": "Suiza",
+			"stadium": "Manaos",
+			"distance": 5348
+		}]
+	},
+	"Uruguay": {
+		"concentration" : "Sete Lagoas",
+		"games": [{
+			"oponent": "Costa Rica",
+			"stadium": "Fortaleza",
+			"distance": 3796
+		}, {
+			"oponent": "Inglaterra",
+			"stadium": "San Pablo",
+			"distance": 1086
+		}, {
+			"oponent": "Italia",
+			"stadium": "Natal",
+			"distance": 3670
+		}]
+	},
+	"Australia": {
+		"concentration" : "Vitória",
+		"games": [{
+			"oponent": "Chile",
+			"stadium": "Cuiabá",
+			"distance": 3518
+		}, {
+			"oponent": "Holanda",
+			"stadium": "Porto Alegre",
+			"distance": 3088
+		}, {
+			"oponent": "España",
+			"stadium": "Curitiba",
+			"distance": 2178
+		}]
+	},
+	"Suiza": {
+		"concentration" : "Porto Seguro",
+		"games": [{
+			"oponent": "Ecuador",
+			"stadium": "Brasilia",
+			"distance": 1922
+		}, {
+			"oponent": "Francia",
+			"stadium": "Salvador (Bahia)",
+			"distance": 1444
+		}, {
+			"oponent": "Honduras",
+			"stadium": "Manaos",
+			"distance": 5488
+		}]
+	},
+	"Croacia": {
+		"concentration" : "Mata de São João",
+		"games": [{
+			"oponent": "Brasil",
+			"stadium": "San Pablo",
+			"distance": 3014
+		}, {
+			"oponent": "Camerún",
+			"stadium": "Manaos",
+			"distance": 5376
+		}, {
+			"oponent": "México",
+			"stadium": "Recife",
+			"distance": 1410
+		}]
+	},
+	"Portugal": {
+		"concentration" : "Campinas",
+		"games": [{
+			"oponent": "Alemania",
+			"stadium": "Salvador (Bahia)",
+			"distance": 2948
+		}, {
+			"oponent": "EE.UU.",
+			"stadium": "Manaos",
+			"distance": 5260
+		}, {
+			"oponent": "Ghana",
+			"stadium": "Brasilia",
+			"distance": 1626
+		}]
+	},
+	"Costa Rica": {
+		"concentration" : "Santos",
+		"games": [{
+			"oponent": "Uruguay",
+			"stadium": "Fortaleza",
+			"distance": 4880
+		}, {
+			"oponent": "Italia",
+			"stadium": "Recife",
+			"distance": 4396
+		}, {
+			"oponent": "Inglaterra",
+			"stadium": "Belo Horizonte",
+			"distance": 1196
+		}]
+	},
+	"Camerún": {
+		"concentration" : "Vitória",
+		"games": [{
+			"oponent": "México",
+			"stadium": "Natal",
+			"distance": 3372
+		}, {
+			"oponent": "Croacia",
+			"stadium": "Manaos",
+			"distance": 5756
+		}, {
+			"oponent": "Brasil",
+			"stadium": "Brasilia",
+			"distance": 1900
+		}]
+	},
+	"Costa de Marfil": {
+		"concentration" : "Aguas de Lindoia",
+		"games": [{
+			"oponent": "Japón",
+			"stadium": "Recife",
+			"distance": 4470
+		}, {
+			"oponent": "Colombia",
+			"stadium": "Brasilia",
+			"distance": 1860
+		}, {
+			"oponent": "Grecia",
+			"stadium": "Fortaleza",
+			"distance": 4910
+		}]
+	},
+	"Japón": {
+		"concentration" : "Itu",
+		"games": [{
+			"oponent": "Costa de Marfil",
+			"stadium": "Recife",
+			"distance": 4288
+		}, {
+			"oponent": "Grecia",
+			"stadium": "Natal",
+			"distance": 4648
+		}, {
+			"oponent": "Colombia",
+			"stadium": "Cuiabá",
+			"distance": 2576
+		}]
+	},
+	"México": {
+		"concentration" : "Santos",
+		"games": [{
+			"oponent": "Camerún",
+			"stadium": "Natal",
+			"distance": 4768
+		}, {
+			"oponent": "Brasil",
+			"stadium": "Fortaleza",
+			"distance": 4878
+		}, {
+			"oponent": "Croacia",
+			"stadium": "Recife",
+			"distance": 4394
+		}]
+	},
+	"Italia": {
+		"concentration" : "Mangaratiba",
+		"games": [{
+			"oponent": "Inglaterra",
+			"stadium": "Manaos",
+			"distance": 5888
+		}, {
+			"oponent": "Costa Rica",
+			"stadium": "Recife",
+			"distance": 3914
+		}, {
+			"oponent": "Uruguay",
+			"stadium": "Natal",
+			"distance": 4324
+		}]
+	},
+	"Estados Unidos": {
+		"concentration" : "San Pablo",
+		"games": [{
+			"oponent": "Ghana",
+			"stadium": "Natal",
+			"distance": 4896
+		}, {
+			"oponent": "Portugal",
+			"stadium": "Manaos",
+			"distance": 5308
+		}, {
+			"oponent": "Alemania",
+			"stadium": "Recife",
+			"distance": 4122
+		}]
+	}
+}

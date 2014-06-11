@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of Website</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <script src="js/d3.v3.min.js"></script>
+    <script src="js/d3.geo.projection.v0.min.js"></script>
+    <script src="js/d3.geo.tile.v0.min.js"></script>
+    <script src="js/topojson.v1.min.js"></script>
+    <script src="js/queue.v1.min.js"></script>
+  </head>
+  <body> 
+    <div id="wrapper">
+      <aside>
+        <div id="menu">
+  <!--         <div class ="menuheader">
+            Elegí una selección<br>y mirá cuanto<br>tiene que viajar
+          </div> -->
+        </div>
+      </aside>
+      <div id="container">
+        <svg id="map"></svg>
+        <footer>footer</footer>
+      </div>
+      <div id="rightsidebar">
+        <div id="bar1" class="bar">
+          <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+            <g>
+              <!-- <rect x="25.354" y="136" opacity="0.5" fill="#00ACE4" width="7.755" height="536"/> -->
+              <!-- <text transform="matrix(0 -1 1 0 33 98)" fill="#00ACE4" font-family="'Roboto'" font-size="14">INGLATERRA</text> -->
+              <!-- <use xlink:href="#plane" transform="matrix(1 0 0 1 0 10)"></use> -->
+              <!-- <text transform="matrix(1 0 0 1 5 119)" font-family="'RobotoCondensed'" font-size="15">362 KM</text> -->
+            <g>
+          </svg>
+        </div>
+        <div id="bar2" class="bar">
+          <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+            <g>
+              <!-- <rect x="25.354" y="665" opacity="0.5" fill="gray" width="7.755" height="7"/> -->
+              <!-- <text transform="matrix(0 -1 1 0 33 622)" fill="gray" font-family="'Roboto'" font-size="14">OTRO</text> -->
+              <!-- <use xlink:href="#plane" transform="matrix(1 0 0 1 0 539)"></use> -->
+              <!-- <text transform="matrix(1 0 0 1 5 643)" font-family="'RobotoCondensed'" font-size="15">362 KM</text> -->
+            </g>
+          </svg>
+        </div>
+      </div>     
+    </div>
+  </body>
+  <script src="js/worldcup.js"></script>
+</html>

@@ -1,0 +1,532 @@
+{
+	"type": "FeatureCollection",
+	"features": [{
+		"type": "Feature",
+		"properties": {
+			"city": "Río de Janeiro",
+			"type": "stadium",
+			"anchor": "s",
+			"name": "Maracaná (Estadio Jornalista Mário Filho)"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-43.230164,-22.912167]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"city": "Brasilia",
+			"type": "stadium",
+			"anchor": "e",
+			"name": "Estadio Nacional (Mané Garrincha)"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-47.899164,-15.7835]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"city": "San Pablo",
+			"type": "stadium",
+			"anchor": "e",
+			"name": "Arena de Sao Paulo (Corinthians)"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-46.473372, -23.545531]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"city": "Fortaleza",
+			"type": "stadium",
+			"anchor": "e",
+			"name": "Estadio Castelao"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-38.522481,-3.807267]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"city": "Belo Horizonte",
+			"type": "stadium",
+			"anchor": "e",
+			"name": "Estadio Mineirao (Governador Magalhaes Pinto)"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-43.971121,-19.865866]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"city": "Porto Alegre",
+			"type": "stadium",
+			"anchor": "e",
+			"name": "Estadio Beira-Rio"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-51.236086,-30.065614]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"city": "Salvador (Bahia)",
+			"type": "stadium",
+			"anchor": "e",
+			"name": "Arena Fonte Nova"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-38.504167,-12.978611]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"city": "Recife",
+			"type": "stadium",
+			"anchor": "e",
+			"name": "Arena Pernambuco"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-35.008056,-8.04]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"city": "Cuiabá",
+			"type": "stadium",
+			"anchor": "e",
+			"name": "Arena Pantanal"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-56.120556,-15.603056]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"city": "Manaos",
+			"type": "stadium",
+			"anchor": "e",
+			"name": "Arena Amazonia"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-60.028056,-3.083056]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"city": "Natal",
+			"type": "stadium",
+			"anchor": "e",
+			"name": "Estadio das Dunas"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-35.213864,-5.828939]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"city": "Curitiba",
+			"type": "stadium",
+			"anchor": "e",
+			"name": "Arena da Baixada"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-49.276944,-25.448333]
+		}
+	}, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-46.1876984, -23.5370998]
+        },
+        "properties": {
+            "team": "Bélgica",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Mogi Das Cruzes"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-43.9150696, -19.6933994]
+        },
+        "properties": {
+            "team": "Argentina",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Vespasiano"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-47.5115013, -23.5084991]
+        },
+        "properties": {
+            "team": "Argelia",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Sorocaba"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-47.2727013, -23.2849998]
+        },
+        "properties": {
+            "team": "Japón",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Itu"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-47.2727013, -23.2849998]
+        },
+        "properties": {
+            "team": "Rusia",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Itu"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-46.6546402, -23.5628395]
+        },
+        "properties": {
+            "team": "Irán",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "San Pablo"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-46.6546402, -23.5628395]
+        },
+        "properties": {
+            "team": "Estados Unidos",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "San Pablo"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-43.9455986, -19.9685993]
+        },
+        "properties": {
+            "team": "Chile",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Belo Horizonte"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-47.1300011, -22.9731998]
+        },
+        "properties": {
+            "team": "Nigeria",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Campinas"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-47.1300011, -22.9731998]
+        },
+        "properties": {
+            "team": "Portugal",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Campinas"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-49.2767181, -25.4400291]
+        },
+        "properties": {
+            "team": "España",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Curitiba"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-54.543499, -25.5270996]
+        },
+        "properties": {
+            "team": "Corea del Sur",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Foz de Iguazú"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-37.0744781, -10.9091997]
+        },
+        "properties": {
+            "team": "Grecia",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Aracaju"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-35.7349091, -9.6665096]
+        },
+        "properties": {
+            "team": "Ghana",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Maceió"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-46.8572006, -23.5986004]
+        },
+        "properties": {
+            "team": "Colombia",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Cotia"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-43.1750107, -22.9121609]
+        },
+        "properties": {
+            "team": "Holanda",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Río de Janeiro"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-43.1750107, -22.9121609]
+        },
+        "properties": {
+            "team": "Inglaterra",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Río de Janeiro"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-47.8078003, -21.1769905]
+        },
+        "properties": {
+            "team": "Francia",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Ribeirao Preto"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-46.5315018, -23.6315994]
+        },
+        "properties": {
+            "team": "Alemania",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Santo Andre"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-51.1026, -30.0715008]
+        },
+        "properties": {
+            "team": "Ecuador",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Viamao"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-46.2168999, -23.9792004]
+        },
+        "properties": {
+            "team": "Bosnia y Herzegovina",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Guaruja"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-42.9666595, -22.4124203]
+        },
+        "properties": {
+            "team": "Brasil",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Teresópolis"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-47.5091019, -23.2238007]
+        },
+        "properties": {
+            "team": "Honduras",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Porto Feliz"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-44.2577019, -19.4717999]
+        },
+        "properties": {
+            "team": "Uruguay",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Sete Lagoas"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-40.2925987, -20.3174]
+        },
+        "properties": {
+            "team": "Australia",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Vitória"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-40.2925987, -20.3174]
+        },
+        "properties": {
+            "team": "Camerún",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Vitória"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-39.0918007, -16.4095001]
+        },
+        "properties": {
+            "team": "Suiza",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Porto Seguro"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-38.3053017, -12.5353003]
+        },
+        "properties": {
+            "team": "Croacia",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Mata de Sao Joao"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-46.2997017, -23.9918003]
+        },
+        "properties": {
+            "team": "Costa Rica",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Santos"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-46.2997017, -23.9918003]
+        },
+        "properties": {
+            "team": "México",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Santos"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-46.6338997, -22.4855995]
+        },
+        "properties": {
+            "team": "Costa de Marfil",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Aguas de Lindoia"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-44.0340996, -22.9375992]
+        },
+        "properties": {
+            "team": "Italia",
+            "type": "concentration",
+			"anchor": "w",
+            "city": "Mangaratiba"
+        }
+    }]
+}
