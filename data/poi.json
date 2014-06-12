@@ -148,7 +148,7 @@
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [-46.1876984, -23.2370998]
+            "coordinates": [-46.1876984, -23.5370998]
         },
         "properties": {
             "team": "Bélgica",
@@ -160,7 +160,7 @@
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [-43.9150696, -19.3933994]
+            "coordinates": [-43.9150696, -19.6933994]
         },
         "properties": {
             "team": "Argentina",
@@ -268,7 +268,7 @@
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [-48.8767181, -25.1400291]
+            "coordinates": [-49.2767181, -25.4400291]
         },
         "properties": {
             "team": "España",
