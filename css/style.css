@@ -191,8 +191,8 @@ svg {
 
 use[id ^=stadium].marker {
 	fill: red;
-	stroke: white;
-	stroke-width: 1px;
+/*	stroke: white;
+	stroke-width: 1px;*/
 	fill-opacity: .75;
 }
 
@@ -203,7 +203,7 @@ use[id ^=concentration].marker {
 	fill-opacity: .75;
 }
 
-use[id ^=concentration].marker.blink {
+use[id ^=concentration].marker.selected,use[id ^=concentration].marker.over {
 	animation: blink 1s infinite;
 	-webkit-animation: blink 1s infinite;  Safari and Chrome 
 }
@@ -214,7 +214,7 @@ use[id ^=concentration].marker.blink {
 		stroke-opacity: .8;
 	}
 	to {
-		stroke-width: 50px;
+		stroke-width: 40px;
 		stroke-opacity: 0;
 	}
 }
@@ -225,7 +225,7 @@ use[id ^=concentration].marker.blink {
 		stroke-opacity: .8;
 	}
 	to {
-		stroke-width: 50px;
+		stroke-width: 40px;
 		stroke-opacity: 0;
 	}
 }
@@ -272,6 +272,15 @@ use[id ^=concentration].marker.blink {
 
 .disabled {
 	display: none;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.disable-hover,
+.disable-hover * {
+  pointer-events: none !important;
 }
 
 .over {
@@ -336,6 +345,14 @@ use[id ^=concentration].marker.blink {
 	font-size: 9.5pt;
 	text-transform: uppercase;
 }
+
+.tooltip.stadium .temp {
+	fill: black;
+	font-family: RobotoCondensed;
+	font-size: 9.5pt;
+	text-transform: uppercase;
+}
+
 
 .tooltip.stadium .distance {
 	fill: white;

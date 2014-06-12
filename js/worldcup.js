@@ -46,15 +46,22 @@ var geoRef = {
 };
 var textSize = d3.scale.linear()
       .domain([4,8])
-      .range([39, 79]);
+      .range([59, 79]);
 
-definitions
+var stad = definitions
   .append("g")
-  .attr("id", "stadium-marker") // Concentration place marker
-.append("circle")
-  .attr("cx", 0)
-  .attr("cy", 0)
-  .attr("r", 4);
+  .attr("id", "stadium-marker")
+  .attr("transform", "translate(-8,-19)"); // Concentration place marker
+  stad.append("path")
+  .attr("d", "M16,8c0-4.4-3.6-8-8-8C3.6,0,0,3.6,0,8c0,3.1,1.7,5.7,4.3,7.1l3.7,4l3.7-4C14.3,13.7,16,11.1,16,8z M8,13c-2.8,0-5-2.2-5-5s2.2-5,5-5c2.8,0,5,2.2,5,5S10.8,13,8,13z")
+  .attr("fill", "black");
+  stad.append("path")
+  .attr("d", "M8,14.5c-3.6,0-6.5-2.9-6.5-6.5S4.4,1.5,8,1.5c3.6,0,6.5,2.9,6.5,6.5S11.6,14.5,8,14.5z")
+  .attr("fill", "white");
+// .append("circle")
+//   .attr("cx", 0)
+//   .attr("cy", 0)
+//   .attr("r", 4);
 definitions
   .append("g")
   .attr("id", "concentration-marker") // Concentration place marker
@@ -131,7 +138,7 @@ queue().defer(d3.json, "data/map.json")
       .enter()
       .append("image")
       .attr("xlink:href", function(d) { // Background images
-        return "/tiles/2/" + d[2] + "/" + d[0] + "/" + d[1] + ".jpg";
+        return "tiles/2/" + d[2] + "/" + d[0] + "/" + d[1] + ".jpg";
       })
       .attr("width", Math.round(tiles.scale))
       .attr("height", Math.round(tiles.scale))
@@ -215,18 +222,19 @@ queue().defer(d3.json, "data/map.json")
         return d.properties.city;
       })
       .on("mouseover", function(d) {
-        d3.select("#tooltip_" + d.domain + "_" + d.name.replace(/\s|\(|\)/g, "_"))
+        d3.select("#tooltip_stadium_" + d.name.replace(/\s|\(|\)/g, "_"))
           .classed("disabled", false);
-        d3.select(this)
-          .classed("blink", true);
-          console.log(d)
+        d3.select("g[id ^=tooltip_concentration]")
+          .classed("disabled", function () {
+            return d.domain != "concentration";
+          });
         // drawBar(bar2,d);
       })
       .on("mouseout", function(d) {
-        d3.select("#tooltip_" + d.domain + "_" + d.name.replace(/\s|\(|\)/g, "_"))
-          .classed("disabled", true);
-        d3.select(this)
-          .classed("blink", false);
+        d3.select("#tooltip_stadium_" + d.name.replace(/\s|\(|\)/g, "_"))
+          .classed("disabled",  true);
+        d3.select("g[id ^=tooltip_concentration]")
+          .classed("disabled", false);
       });
   });
 d3.select(self.frameElement).style("height", height + "px");
@@ -358,7 +366,6 @@ queue().defer(d3.json, "data/teams.json")
         drawBar(bar1,{team: "", totalDistance: 0});
       }
 
-
       var pois = d3.selectAll("use[id^=concentration],use[id^=stadium],line[id^=route]");
       pois.datum(function(p) {
         var poi = this.getAttribute("id").split("."),
@@ -375,6 +382,9 @@ queue().defer(d3.json, "data/teams.json")
         .classed("disabled", function(s) {
           return !s.selected;
         })
+        .classed("selected", function(s) {
+          return (d && s.selected);
+        })
         .classed("over", false);
       var boxes = d3.selectAll("g.tooltip");
       boxes.remove();
@@ -390,12 +400,23 @@ queue().defer(d3.json, "data/teams.json")
             .append("g")
             .attr("class", "tooltip " + s.domain)
             .attr("id", "tooltip_" + s.domain + "_" + s.name.replace(/\s|\(|\)/g, "_"))
-            .classed("disabled", true),
-            // thisLine = thisTooltip.append("g"),
+            .classed("disabled", function (t) {
+              return s.domain != "concentration" && s.name != d.team;
+            }),
             thisBox = thisTooltip.sort(function(a, b) {
               return parseFloat(b.attr("x")) - parseFloat(a.attr("x"));
             })
             .append("g")
+            .on("mouseover", function (s) {
+              d3.select(this).classed("hidden", function (t) {
+                return t.domain != "concentration";
+              });
+            })
+            .on("mouseout", function (s) {
+              d3.select(this).classed("hidden", function (t) {
+                return t.domain == "concentration";
+              })
+            })
             .attr("viewBox", "0 0 " + width + " " + height)
             .attr("transform", function(p) {
               p.width = boxWidth;
@@ -416,65 +437,58 @@ queue().defer(d3.json, "data/teams.json")
               return "translate(" + p.x + ", " + p.y + ")";
             });
           thisBox.append("rect") //box
-          .attr("class", "box")
+          .attr("class", "box disable-hover")
             .attr("x", 0)
             .attr("y", 0)
             .attr("width", boxWidth)
             .attr("height", boxHeight);
           if (s.domain == "concentration") {
             thisBox.append("text") //Team text
-            .attr("class", "team")
+            .attr("class", "team  disable-hover")
               .attr("x", 5)
               .attr("y", 35)
               .text(d.team);
             thisBox.append("text") //City text
-            .attr("class", "city")
+            .attr("class", "city disable-hover")
               .attr("x", 5)
               .attr("y", 52)
               .text(d.concentration);
             thisBox.append("text") //City text
-            .attr("class", "type")
+            .attr("class", "type disable-hover")
               .attr("x", 5)
               .attr("y", 17)
               .text("Concentración");
           } else {
             thisBox.append("text") //Team text
-            .attr("class", "stadium")
+            .attr("class", "stadium disable-hover")
               .attr("x", 5)
               .attr("y", 20)
               .text(s.name);
             thisBox.append("rect") //box
-            .attr("class", "box distance")
+            .attr("class", "box distance disable-hover")
               .attr("x", 105)
               .attr("y", 0)
               .attr("width", 55)
               .attr("height", 31);
             thisBox.append("text") //Team text
-            .attr("class", "distance")
+            .attr("class", "distance disable-hover")
               .attr("x", 112)
               .attr("y", 20)
               .text(function(p) {
                 var index = d.stadiums.indexOf(s.name);
                 return d.games[index].distance + " Km";
               });
+            thisBox.append("text") //Temp text
+            .attr("class", "temp disable-hover")
+              .attr("x", 20)
+              .attr("y", 52)
+              .text("Min: 10°C")
+            thisBox.append("text") //Temp text
+            .attr("class", "temp disable-hover")
+              .attr("x", 85)
+              .attr("y", 52)
+              .text("Max: 26°C")
           }
-          // thisLine.append("line") //line
-          //         .attr("class", "line")
-          //         .attr("x1", function (p) {
-          //           var offset = (p.gravity == "w") ? (-1) : 1;
-          //           return p.anchor[p.gravity][0] + offset;
-          //         })
-          //         .attr("y1", function (p) {
-          //           var offset = (p.gravity == "n") ? (-1) : 1;
-          //           return p.anchor[p.gravity][1] + offset;
-          //         })
-          //         .attr("x2", function (p) {
-          //           var offset = (p.gravity == "e") ? (-6) : 6;
-          //           return parseFloat(p.attr("x")) + offset;
-          //         })
-          //         .attr("y2", function (p) {
-          //           return parseFloat(p.attr("y"));
-          //         });
         }
       })
         .classed("disabled", function(s) {
@@ -504,11 +518,13 @@ queue().defer(d3.json, "data/teams.json")
           return d && !s.selected && s.over;
         })
         .classed("disabled", function(s) {
-          return (!d && !s.selected && s.domain != "route") || (!d && s.domain == "route" && !s.selected) || (!s.selected && !s.over);
+          return (!d && !s.selected) || (!s.selected && !s.over);
         });
 
       if (d) {
         drawBar(bar2,d);
+      } else {
+        drawBar(bar2,{team: "", totalDistance: 0});
       }
 
     });
