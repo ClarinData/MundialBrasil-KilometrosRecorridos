@@ -424,7 +424,7 @@ queue().defer(d3.json, "data/teams.json")
               p.x = parseFloat(p.attr("x")) - boxWidth / 2;
               // ((s.domain == "stadium") ? (-xOffset - boxWidth) : xOffset);
               p.y = parseFloat(p.attr("y")) - boxHeight - 10;
-              p.y = (p.y < 0 || p.y > (height - boxHeight - 10)) ? height - boxHeight + yOffset : p.y;
+              p.y = (p.y < 0 || p.y > (height - boxHeight - 10)) ? height - boxHeight + yOffset : p.y + yOffset;
               p.x = (p.x < 0 || p.x > (width - boxWidth - 10)) ? width - boxWidth - 10 : p.x;
               p.anchor = {
                 w: [p.x, p.y + p.height / 2],
