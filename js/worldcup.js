@@ -526,8 +526,7 @@ queue().defer(d3.json, "data/teams.json")
   });
 
 function drawBar(bar,d) {
-    var team = d.team.split(/\s+/),
-        n=team.length;
+    var team = d.team.split(/\s+/);
 
     var title = bar.select("text.bar_title");
 
@@ -537,13 +536,12 @@ function drawBar(bar,d) {
         .attr("x", 30)
         .attr("y", inverseLinearScale(d.totalDistance) -24);
 
-    while (n>0) {
+    while (team.length>0) {
       bar.select("text.bar_title")
          .append("tspan")
          .attr("x",30)
          .attr("dy","-1.1em")
          .text(team.pop() || "");
-      n--;
     }
 
     bar.select("use")
