@@ -39,6 +39,10 @@ var bar1 = d3.select("#bar1")
                   .select("svg").select("g");
 var bar2 = d3.select("#bar2")
                   .select("svg").select("g");
+var axis = d3.select("#barAxis")
+                  .select("svg").select("g")
+                  .attr("transform", "translate(0,-10)");
+
 var definitions = svg.append("defs");
 var geoRef = {
   stadium: {},
@@ -47,6 +51,8 @@ var geoRef = {
 var textSize = d3.scale.linear()
       .domain([4,8])
       .range([59, 79]);
+
+var barSize = [70,665];
 
 var stad = definitions
   .append("g")
@@ -75,51 +81,30 @@ definitions
 .append("path")
   .attr("d", "M28.288,117.296v4.877l-7.129,4.455v1.744l7.129-2.303v4.111l-1.643,1.432v1.348l2.564-0.924l2.563,0.924v-1.348l-1.641-1.432v-4.111l7.129,2.303v-1.744l-7.129-4.455v-4.877c0-0.6-0.416-1.092-0.922-1.092C28.702,116.205,28.288,116.697,28.288,117.296z");
 
+[bar1,bar2].forEach(function(entry) {
+  entry.append("rect")
+      .attr("class", "bar_line")
+      .attr("x", 25.5)
+      .attr("y", barSize[1])
+      .attr("width", 7.755)
+      .attr("height", 7);
 
-bar1.append("rect")
-.attr("class", "bar_line")
-.attr("x", 35.354)
-.attr("y", 665)
-.attr("width", 7.755)
-.attr("height", 7);
+  var bar1title = entry.append("text")
+      .attr("x", 30)
+      .attr("y", 622)
+      .attr("class", "bar_title");
 
-bar1.append("text")
-    .attr("transform", "matrix(0 -1 1 0 43 622)")
-    .attr("class", "bar_title")
-    .text(" ");
+  entry.append("use")
+      .attr("class", "bar_icon")
+      .attr("xlink:href", "#plane")
+      .attr("transform", "matrix(1 0 0 1 0 539)");
 
-bar1.append("use")
-    .attr("class", "bar_icon")
-    .attr("xlink:href", "#plane")
-    .attr("transform", "matrix(1 0 0 1 10 539)");
-
-bar1.append("text")
-    .attr("transform", "matrix(1 0 0 1 20 643)")
-    .attr("class", "bar_details")
-    .text("0 KM");
-
-bar2.append("rect")
-.attr("class", "bar_line")
-.attr("x", 35.354)
-.attr("y", 665)
-.attr("width", 7.755)
-.attr("height", 7);
-
-bar2.append("text")
-    .attr("transform", "matrix(0 -1 1 0 43 622)")
-    .attr("class", "bar_title")
-    .text("");
-
-bar2.append("use")
-    .attr("class", "bar_icon")
-    .attr("xlink:href", "#plane")
-    .attr("transform", "matrix(1 0 0 1 10 539)");
-
-bar2.append("text")
-    .attr("transform", "matrix(1 0 0 1 20 643)")
-    .attr("class", "bar_details")
-    .text("0 KM");
-
+  entry.append("text")
+      .attr("x",30)
+      .attr("y",649)
+      .attr("class", "bar_details")
+      .text("0 KM");
+});
 
 var linearScale = function () { return 136; },
     inverseLinearScale = function () { return 136; };
@@ -309,10 +294,20 @@ queue().defer(d3.json, "data/teams.json")
 
     linearScale = d3.scale.linear()
       .domain([0,maxDistance])
-      .range([200, 665]);
+      .range(barSize);
     inverseLinearScale = d3.scale.linear()
       .domain([0,maxDistance])
-      .range([665, 200]);
+      .range(barSize.reverse());
+
+    var yAxis = d3.svg.axis()
+                  .scale(inverseLinearScale)
+                  .orient('right')
+                  .tickSize(1) // Tick size controls the width of the svg lines used as ticks
+                  .ticks(12, "5d Km");
+
+    var xAxisGroup = axis.call(yAxis);
+
+
     var routes = []
     data.map(function(entry) {
       var concentration = d3.select("use[id='concentration." + entry.team + "']");
@@ -531,18 +526,55 @@ queue().defer(d3.json, "data/teams.json")
   });
 
 function drawBar(bar,d) {
-    bar.select("text.bar_title")
-        .transition()
-        .attr("transform", function () {
-          var vpos = inverseLinearScale(d.totalDistance) -43;
-          return "matrix(0 -1 1 0 43 " + vpos + ")";
-        })
-        .text(d.team);
+
+    // var title = bar.select("text.bar_title")
+    //     .transition()
+    //     .attr("x", 30)
+    //     .attr("dy", function () {
+    //       return inverseLinearScale(d.totalDistance) -43;
+    //     })
+    //     .attr("y",0);
+    //     // .attr("transform", function () {
+    //     //   var vpos = inverseLinearScale(d.totalDistance) -43;
+    //     //   return "matrix(1 0 0 1 30 " + vpos + ")";
+    //     // })
+    //     // .text(d.team)
+    //     // .call(wrap, [d.team]);
+
+    // var textWords = d.team.split(/\s+/).reverse(),
+    //     word,
+    //     line = [],
+    //     lineNumber = 0,
+    //     lineHeight = 1.1, // ems
+    //     y = text.attr("y"),
+    //     dy = parseFloat(text.attr("dy") | 0)
+    //     tspan = title.append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+
+    var team = d.team.split(/\s+/).reverse(),
+        n=team.length;
+
+    var title = bar.select("text.bar_title");
+
+    title.selectAll("tspan").remove();
+
+    title.transition()
+        .attr("x", 30)
+        .attr("y", inverseLinearScale(d.totalDistance) -24);
+
+    while (n>0) {
+      bar.select("text.bar_title")
+         .append("tspan")
+         .attr("x",30)
+         .attr("dy","-1.1em")
+         .text(team.pop() || "");
+      n--;
+    }
+
     bar.select("use")
         .transition()
         .attr("transform", function () {
           var vpos = inverseLinearScale(d.totalDistance) -126;
-          return "matrix(1 0 0 1 10 " + vpos + ")";
+          return "matrix(1 0 0 1 0 " + vpos + ")";
         });
     bar.select("rect")
         .transition()
@@ -550,12 +582,7 @@ function drawBar(bar,d) {
         .attr("height", linearScale(d.totalDistance));
     bar.select("text.bar_details")
         .transition()
-        .attr("transform", function () {
-          var vpos = inverseLinearScale(d.totalDistance) -16,
-              textLength = d.totalDistance.toString().length,
-              hpos = 79 - textSize(textLength + 3);
-
-          return "matrix(1 0 0 1 " + hpos + " " + vpos + ")";
-        })
+        .attr("x", 30)
+        .attr("y", inverseLinearScale(d.totalDistance) -16)
         .text(d.totalDistance + " KM");
 }

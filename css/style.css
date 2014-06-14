@@ -371,7 +371,21 @@ use[id ^=concentration].marker.selected,use[id ^=concentration].marker.over {
 .bar {
 	display: inline-block;
 	float: left;
-	width: 50%;
+	width: 38%;
+}
+
+.axis {
+	shape-rendering: crispEdges;
+	display: inline-block;
+	float: left;
+	width: 24%;
+	font-family: RobotoCondensed;
+	font-size: 10pt;
+	text-transform: uppercase;
+}
+
+.axis path {
+	display: none;
 }
 
 #bar1 {
@@ -386,13 +400,15 @@ use[id ^=concentration].marker.selected,use[id ^=concentration].marker.over {
 
 .bar_title {
 	font-family: Roboto;
-	font-size: 14pt;
+	font-size: 8pt;
+	text-anchor: middle;
 }
 
 .bar_details {
 	font-family: RobotoCondensed;
-	font-size: 14pt;
+	font-size: 9pt;
 	fill: black;
+	text-anchor: middle;
 }
 
 .bar_line {
