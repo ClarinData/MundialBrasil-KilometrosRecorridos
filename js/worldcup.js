@@ -53,7 +53,7 @@ var textSize = d3.scale.linear()
       .range([59, 79]);
 
 var barSize = [70,665];
-
+var weather = {};
 var stad = definitions
   .append("g")
   .attr("id", "stadium-marker")
@@ -207,19 +207,28 @@ queue().defer(d3.json, "data/map.json")
         return d.properties.city;
       })
       .on("mouseover", function(d) {
-        d3.select("#tooltip_stadium_" + d.name.replace(/\s|\(|\)/g, "_"))
+        var thisTooltip = d3.select("#tooltip_stadium_" + d.name.replace(/\s|\(|\)/g, "_"))
           .classed("disabled", false);
         d3.select("g[id ^=tooltip_concentration]")
           .classed("disabled", function () {
             return d.domain != "concentration";
           });
-        // drawBar(bar2,d);
+        var oponent = (d.oponent) ? d3.select("div.menuitem." + d.oponent.replace(/\s+|\.+/g,"_")).data()[0] : null;
+        drawBar(bar2,{team: d.oponent, totalDistance: (oponent || {totalDistance: 0}).totalDistance});
+        d3.json("http://api.openweathermap.org/data/2.5/weather?lang=sp&units=metric&lat=" +
+          d.geometry.coordinates[1] + "&lon=" + d.geometry.coordinates[0], function (weather){
+            thisTooltip.select(".temp.min")
+                       .text("Min: " + Math.round(weather.main.temp_min) + "°C");
+            thisTooltip.select(".temp.max")
+                       .text("Max: " + Math.round(weather.main.temp_max) + "°C");
+        }); 
       })
       .on("mouseout", function(d) {
         d3.select("#tooltip_stadium_" + d.name.replace(/\s|\(|\)/g, "_"))
           .classed("disabled",  true);
         d3.select("g[id ^=tooltip_concentration]")
           .classed("disabled", false);
+        drawBar(bar2,{team: "", totalDistance: 0});
       });
   });
 d3.select(self.frameElement).style("height", height + "px");
@@ -229,7 +238,9 @@ var bpMenu = function(selector, data) {
     (function(menuitems) {
       menuitems.nodes = (function(nodes) {
         nodes.append("div")
-          .attr("class", "menuitem radio")
+          .attr("class",function (d) {
+            return "menuitem radio " + d.team.replace(/\s+|\.+/g,"_");
+          })
           .on("mouseover", function(d) {
             if (this.id != "teamActive") {
               menu.event.mouseover(d);
@@ -366,13 +377,12 @@ queue().defer(d3.json, "data/teams.json")
         var poi = this.getAttribute("id").split("."),
           poi_route = (poi[0] == "route") && d && d.team == poi[1],
           poi_noroute = (poi[0] != "route") && (!d || d.team == poi[1] || d.stadiums.indexOf(poi[1]) > -1);
-        return {
-          "selected": (poi_route || poi_noroute),
-          "domain": poi[0],
-          "name": poi[1],
-          "gravity": p.anchor,
-          // "oponent": (d.games[d.stadiums.indexOf(poi[1])]) ? d.games[d.stadiums.indexOf(poi[1])].oponent : null
-        };
+          p.selected = (poi_route || poi_noroute);
+          p.domain = poi[0];
+          p.name = poi[1];
+          p.gravity = p.anchor;
+          p.oponent = (d.games[d.stadiums.indexOf(poi[1])]) ? d.games[d.stadiums.indexOf(poi[1])].oponent : null;
+        return p;
       })
         .classed("disabled", function(s) {
           return !s.selected;
@@ -391,7 +401,9 @@ queue().defer(d3.json, "data/teams.json")
       markers.each(function(s, i) {
         if (s.selected && d) {
           var marker = d3.select(this),
-            thisTooltip = tooltips.datum(marker)
+            thisTooltip = tooltips.datum(function () {
+              return marker;
+            })
             .append("g")
             .attr("class", "tooltip " + s.domain)
             .attr("id", "tooltip_" + s.domain + "_" + s.name.replace(/\s|\(|\)/g, "_"))
@@ -474,15 +486,15 @@ queue().defer(d3.json, "data/teams.json")
                 return d.games[index].distance + " Km";
               });
             thisBox.append("text") //Temp text
-            .attr("class", "temp disable-hover")
+            .attr("class", "temp min disable-hover")
               .attr("x", 20)
               .attr("y", 52)
-              .text("Min: 10°C")
+              .text("Min: N/D")
             thisBox.append("text") //Temp text
-            .attr("class", "temp disable-hover")
+            .attr("class", "temp max disable-hover")
               .attr("x", 85)
               .attr("y", 52)
-              .text("Max: 26°C")
+              .text("Max: N/D")
           }
         }
       })
@@ -500,14 +512,11 @@ queue().defer(d3.json, "data/teams.json")
         var poi = this.getAttribute("id").split("."),
           poi_route = (poi[0] == "route") && d && d.team == poi[1],
           poi_noroute = (poi[0] != "route") && (!d || d.team == poi[1] || d.stadiums.indexOf(poi[1]) > -1);
-        return {
-          "selected": p.selected,
-          "over": (poi_route || poi_noroute),
-          "domain": poi[0],
-          "name": poi[1],
-          "route": poi_route,
-          // "oponent": (d.games[d.stadiums.indexOf(poi[1])]) ? d.games[d.stadiums.indexOf(poi[1])].oponent : null
-        };
+        p.over = (poi_route || poi_noroute);
+        p.domain = poi[0];
+        p.name = poi[1];
+        p.route = poi_route;
+        return p;
       })
         .classed("over", function(s) {
           return d && !s.selected && s.over;
@@ -526,7 +535,9 @@ queue().defer(d3.json, "data/teams.json")
   });
 
 function drawBar(bar,d) {
-    var team = d.team.split(/\s+/);
+    var team = (d.team) ? d.team.split(/\s+/) : [];
+
+    d.totalDistance = (d.team) ? d.totalDistance : 0;
 
     var title = bar.select("text.bar_title");
 
@@ -537,11 +548,10 @@ function drawBar(bar,d) {
         .attr("y", inverseLinearScale(d.totalDistance) -24);
 
     while (team.length>0) {
-      bar.select("text.bar_title")
-         .append("tspan")
-         .attr("x",30)
-         .attr("dy","-1.1em")
-         .text(team.pop() || "");
+      title.append("tspan")
+           .attr("x",30)
+           .attr("dy","-1.1em")
+           .text(team.pop() || "");
     }
 
     bar.select("use")

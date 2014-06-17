@@ -162,7 +162,7 @@
 	"Ghana": {
 		"concentration" : "Maceió",
 		"games": [{
-			"oponent": "EE.UU.",
+			"oponent": "Estados Unidos",
 			"stadium": "Natal",
 			"distance": 854
 		}, {
@@ -234,7 +234,7 @@
 			"stadium": "Fortaleza",
 			"distance": 2828
 		}, {
-			"oponent": "EE.UU.",
+			"oponent": "Estados Unidos",
 			"stadium": "Recife",
 			"distance": 2074
 		}]
@@ -390,7 +390,7 @@
 			"stadium": "Salvador (Bahia)",
 			"distance": 2948
 		}, {
-			"oponent": "EE.UU.",
+			"oponent": "Estados Unidos",
 			"stadium": "Manaos",
 			"distance": 5260
 		}, {
