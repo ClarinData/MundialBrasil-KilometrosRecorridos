@@ -1,4 +1,30 @@
-/* Webfont: Roboto-Bold */@font-face {
+/* KeyFrames */
+
+@keyframes blink {
+	from {
+		stroke-width: 1px;
+		stroke-opacity: .8;
+	}
+	to {
+		stroke-width: 40px;
+		stroke-opacity: 0;
+	}
+}
+
+@-webkit-keyframes blink { /* Safari and Chrome */
+	from {
+		stroke-width: 1px;
+		stroke-opacity: .8;
+	}
+	to {
+		stroke-width: 40px;
+		stroke-opacity: 0;
+	}
+}
+
+/* Webfonts */
+
+@font-face {
     font-family: 'Roboto';
     src: url('fonts/Roboto-Bold.eot'); /* IE9 Compat Modes */
     src: url('fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -10,7 +36,7 @@
     text-rendering: optimizeLegibility;
 }
 
-/* Webfont: RobotoCondensed-Regular */@font-face {
+@font-face {
     font-family: 'RobotoCondensed';
     src: url('fonts/RobotoCondensed-Regular.eot'); /* IE9 Compat Modes */
     src: url('fonts/RobotoCondensed-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -22,7 +48,7 @@
     text-rendering: optimizeLegibility;
 }
 
-/* Webfont: RobotoCondensed-Light */@font-face {
+@font-face {
     font-family: 'RobotoCondensedLight';
     src: url('fonts/RobotoCondensed-Light.eot'); /* IE9 Compat Modes */
     src: url('fonts/RobotoCondensed-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -189,45 +215,23 @@ svg {
 	stroke-width: .5px;
 }
 
-use[id ^=stadium].marker {
+use.stadium.marker {
 	fill: red;
 /*	stroke: white;
 	stroke-width: 1px;*/
 	fill-opacity: .75;
 }
 
-use[id ^=concentration].marker {
+use.concentration.marker {
 	fill: black;
 	stroke: white;
 	stroke-width: 1px;
 	fill-opacity: .75;
 }
 
-use[id ^=concentration].marker.selected,use[id ^=concentration].marker.over {
-	animation: blink 1s infinite;
-	-webkit-animation: blink 1s infinite;  Safari and Chrome 
-}
-
-@keyframes blink {
-	from {
-		stroke-width: 1px;
-		stroke-opacity: .8;
-	}
-	to {
-		stroke-width: 40px;
-		stroke-opacity: 0;
-	}
-}
-
-@-webkit-keyframes blink { /* Safari and Chrome */
-	from {
-		stroke-width: 1px;
-		stroke-opacity: .8;
-	}
-	to {
-		stroke-width: 40px;
-		stroke-opacity: 0;
-	}
+use.concentration.marker.selected, use.concentration.marker.over {
+	animation: blink 1s ease-out 0s infinite normal;
+	-webkit-animation: blink 1s ease-out 0s infinite normal;
 }
 
 .line[id ^=route] {
@@ -372,16 +376,17 @@ line.over {
 }
 
 .bar {
-	display: inline-block;
+	position: relative;
+	display: block;
 	float: left;
 	width: 38%;
 }
 
 .axis {
 	shape-rendering: crispEdges;
-	display: inline-block;
+	display: block;
 	float: left;
-	width: 24%;
+	width: 100%;
 	font-family: RobotoCondensed;
 	font-size: 10pt;
 	text-transform: uppercase;
@@ -391,14 +396,23 @@ line.over {
 	display: none;
 }
 
+.axis line {
+	stroke: gray;
+	stroke-opacity: 0.5;
+	stroke-width: 1px;
+	stroke-dasharray: 2, 2;
+}
+
 #bar1 {
 	fill: #00ACE4;
 	stroke: none;
+	margin-left: -160px;
 }
 
 #bar2 {
 	fill: gray;
 	stroke: none;
+	margin-left: -100px;
 }
 
 .bar_title {

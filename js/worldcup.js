@@ -1,5 +1,6 @@
 // check http://jsfiddle.net/Qh9X5/1249/ for quadtree
 // d3.labeler https://github.com/tinker10/D3-Labeler
+
 var svg = d3.select("svg#map"),
   width = svg[0][0].clientWidth,
   height = svg[0][0].clientHeight;
@@ -35,22 +36,19 @@ var poi = svg.append("g")
   .attr("id", "poi");
 var tooltips = svg.append("g")
   .attr("id", "tooltips");
+var axis = d3.select("#barAxis")
+  .select("svg").select("g")
+  .attr("transform", "translate(0,-10)");
 var bar1 = d3.select("#bar1")
   .select("svg").select("g");
 var bar2 = d3.select("#bar2")
   .select("svg").select("g");
-var axis = d3.select("#barAxis")
-  .select("svg").select("g")
-  .attr("transform", "translate(0,-10)");
 
 var definitions = svg.append("defs");
 var geoRef = {
   stadium: {},
   concentration: {}
 };
-var textSize = d3.scale.linear()
-  .domain([4, 8])
-  .range([59, 79]);
 
 var barSize = [70, 665];
 var weather = {};
@@ -64,10 +62,6 @@ stad.append("path")
 stad.append("path")
   .attr("d", "M8,14.5c-3.6,0-6.5-2.9-6.5-6.5S4.4,1.5,8,1.5c3.6,0,6.5,2.9,6.5,6.5S11.6,14.5,8,14.5z")
   .attr("fill", "white");
-// .append("circle")
-//   .attr("cx", 0)
-//   .attr("cy", 0)
-//   .attr("r", 4);
 definitions
   .append("g")
   .attr("id", "concentration-marker") // Concentration place marker
@@ -139,44 +133,44 @@ queue()
     .attr("y", function(d) {
       return Math.round((d[1] + tiles.translate[1]) * tiles.scale);
     });
-  // OpenWheather Tiles
-  var tiles = tile();
-  map.append("g")
-    .attr("class", "temperature")
-    .attr("clip-path", "url(#clip)")
-    .selectAll("image")
-    .data(tiles)
-    .enter()
-    .append("image")
-    .attr("xlink:href", function(d) { // openweathermap temperature
-      return "http://" + ["a", "b", "c", "d"][Math.random() * 4 | 0] + ".tile.openweathermap.org/map/temp/" + d[2] + "/" + d[0] + "/" + d[1] + ".png";
-    })
-    .attr("width", Math.round(tiles.scale))
-    .attr("height", Math.round(tiles.scale))
-    .attr("x", function(d) {
-      return Math.round((d[0] + tiles.translate[0]) * tiles.scale);
-    })
-    .attr("y", function(d) {
-      return Math.round((d[1] + tiles.translate[1]) * tiles.scale);
-    });
-  map.append("g")
-    .attr("class", "precipitations")
-    .attr("clip-path", "url(#clip)")
-    .selectAll("image")
-    .data(tiles)
-    .enter()
-    .append("image")
-    .attr("xlink:href", function(d) { // openweathermap precipitations
-      return "http://" + ["a", "b", "c", "d"][Math.random() * 4 | 0] + ".tile.openweathermap.org/map/precipitation/" + d[2] + "/" + d[0] + "/" + d[1] + ".png";
-    })
-    .attr("width", Math.round(tiles.scale))
-    .attr("height", Math.round(tiles.scale))
-    .attr("x", function(d) {
-      return Math.round((d[0] + tiles.translate[0]) * tiles.scale);
-    })
-    .attr("y", function(d) {
-      return Math.round((d[1] + tiles.translate[1]) * tiles.scale);
-    });
+  // // OpenWheather Tiles
+  // var tiles = tile();
+  // map.append("g")
+  //   .attr("class", "temperature")
+  //   .attr("clip-path", "url(#clip)")
+  //   .selectAll("image")
+  //   .data(tiles)
+  //   .enter()
+  //   .append("image")
+  //   .attr("xlink:href", function(d) { // openweathermap temperature
+  //     return "http://" + ["a", "b", "c", "d"][Math.random() * 4 | 0] + ".tile.openweathermap.org/map/temp/" + d[2] + "/" + d[0] + "/" + d[1] + ".png";
+  //   })
+  //   .attr("width", Math.round(tiles.scale))
+  //   .attr("height", Math.round(tiles.scale))
+  //   .attr("x", function(d) {
+  //     return Math.round((d[0] + tiles.translate[0]) * tiles.scale);
+  //   })
+  //   .attr("y", function(d) {
+  //     return Math.round((d[1] + tiles.translate[1]) * tiles.scale);
+  //   });
+  // map.append("g")
+  //   .attr("class", "precipitations")
+  //   .attr("clip-path", "url(#clip)")
+  //   .selectAll("image")
+  //   .data(tiles)
+  //   .enter()
+  //   .append("image")
+  //   .attr("xlink:href", function(d) { // openweathermap precipitations
+  //     return "http://" + ["a", "b", "c", "d"][Math.random() * 4 | 0] + ".tile.openweathermap.org/map/precipitation/" + d[2] + "/" + d[0] + "/" + d[1] + ".png";
+  //   })
+  //   .attr("width", Math.round(tiles.scale))
+  //   .attr("height", Math.round(tiles.scale))
+  //   .attr("x", function(d) {
+  //     return Math.round((d[0] + tiles.translate[0]) * tiles.scale);
+  //   })
+  //   .attr("y", function(d) {
+  //     return Math.round((d[1] + tiles.translate[1]) * tiles.scale);
+  //   });
   // Country limits (path)
   map.insert("path") // Land
   .datum(topojson.feature(json[0], json[0].objects.land))
@@ -191,8 +185,7 @@ queue()
   // POI (stadiums, consentrations)
   poi.selectAll(".poi")
     .data(json[1].features.sort(function(a, b) {
-      console.log(a, b)
-      return (b.domain == "stadium") ? 1 : -1;
+      return (b.domain == "stadium") ? -1 : 1;
     }))
     .enter()
     .append("use")
@@ -327,10 +320,10 @@ queue()
   var yAxis = d3.svg.axis()
     .scale(inverseLinearScale)
     .orient('right')
-    .tickSize(1) // Tick size controls the width of the svg lines used as ticks
-    .ticks(12, "5d Km");
+    .tickSize(130) // Tick size controls the width of the svg lines used as ticks
+    .ticks(12, "5d");
 
-  var xAxisGroup = axis.call(yAxis);
+  var yAxisGroup = axis.call(yAxis);
 
   var routes = []
   data.map(function(entry) {
@@ -585,7 +578,7 @@ function drawBar(bar, d) {
   bar.select("rect")
     .transition()
     .attr("y", inverseLinearScale(d.totalDistance))
-    .attr("height", linearScale(d.totalDistance));
+    .attr("height", linearScale(d.totalDistance) - 63);
   bar.select("text.bar_details")
     .transition()
     .attr("x", 30)
