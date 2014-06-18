@@ -321,7 +321,10 @@ queue()
     .scale(inverseLinearScale)
     .orient('right')
     .tickSize(130) // Tick size controls the width of the svg lines used as ticks
-    .ticks(12, "5d");
+    .tickFormat(function (d) {
+      return d3.format("5d")(d) + ((!d) ? " Km" : "");
+    })
+    .ticks(12);
 
   var yAxisGroup = axis.call(yAxis);
 
