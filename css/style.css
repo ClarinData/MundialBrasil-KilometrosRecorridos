@@ -284,11 +284,14 @@ use[id ^=concentration].marker.selected,use[id ^=concentration].marker.over {
 }
 
 .over {
+	opacity: .95;
+}
+
+line.over {
 	fill: black !important;
 	stroke: black !important;
 	stroke-linecap: round;
 	stroke-dasharray: 1, 5;
-	opacity: .95;
 }
 
 .tooltip.concentration .box {
