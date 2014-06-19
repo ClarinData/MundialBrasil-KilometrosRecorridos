@@ -1,20 +1,32 @@
 // check http://jsfiddle.net/Qh9X5/1249/ for quadtree
 // d3.labeler https://github.com/tinker10/D3-Labeler
 
-var svg = d3.select("svg#map"),
-  width = svg[0][0].clientWidth,
-  height = svg[0][0].clientHeight;
-svg.attr("viewBox", "0 0 " + width + " " + height)
-  .attr("width", width)
-  .attr("height", height);
+var svg = d3.select("svg#map")
+            .attr("width", function () {
+              return this.clientWidth || this.parentElement.clientWidth;
+            })
+            .attr("height", function () {
+              return this.clientHeight || this.parentElement.clientHeight;
+            })
+            .attr("viewBox", function () {
+              return "0 0 " + (this.clientWidth || this.parentElement.clientWidth) + " " + (this.clientHeight || this.parentElement.clientHeight);
+            }),
+  width = parseFloat(svg.attr("width")),
+  height = parseFloat(svg.attr("height"));
+
 window.addEventListener('resize', function() {
-  var currentWidth = svg[0][0].clientWidth,
-    currentHeight = svg[0][0].clientHeight;
-  height = currentWidth * (currentHeight / currentWidth);
-  width = currentWidth;
-  svg.attr("width", width)
-    .attr("height", height);
+  svg.attr("width", function () {
+              return this.clientWidth || this.parentElement.clientWidth;
+            })
+     .attr("height", function () {
+              var currentWidth = this.clientWidth || this.parentElement.clientWidth,
+                  currentHeight = this.clientHeight || this.parentElement.clientHeight;
+              return currentWidth * (currentHeight / currentWidth);
+            });
+  width = parseFloat(svg.attr("width"));
+  height = parseFloat(svg.attr("height"));
 });
+
 var projection = d3.geo.mercator()
   .center([0, -15])
   .rotate([52, 0])
@@ -22,7 +34,6 @@ var projection = d3.geo.mercator()
   .translate([width / 2, height / 2]);
 var path = d3.geo.path()
   .projection(projection);
-var graticule = d3.geo.graticule();
 var tile = d3.geo.tile()
   .size([width, height])
   .scale(projection.scale() * 2 * Math.PI)
@@ -37,12 +48,24 @@ var poi = svg.append("g")
 var tooltips = svg.append("g")
   .attr("id", "tooltips");
 var axis = d3.select("#barAxis")
-  .select("svg").select("g")
+  .select("svg")
+  .attr("height", function () {
+    return this.clientHeight || this.parentElement.clientHeight;
+  })
+  .select("g")
   .attr("transform", "translate(0,-10)");
 var bar1 = d3.select("#bar1")
-  .select("svg").select("g");
+  .select("svg")
+  .attr("height", function () {
+    return this.clientHeight || this.parentElement.clientHeight;
+  })
+  .select("g");
 var bar2 = d3.select("#bar2")
-  .select("svg").select("g");
+  .select("svg")
+  .attr("height", function () {
+    return this.clientHeight || this.parentElement.clientHeight;
+  })
+  .select("g");
 
 var definitions = svg.append("defs");
 var geoRef = {
@@ -81,7 +104,7 @@ definitions
       .attr("x", 25.5)
       .attr("y", barSize[1])
       .attr("width", 7.755)
-      .attr("height", 7);
+      .attr("height", 0);
 
     var bar1title = entry.append("text")
       .attr("x", 30)
@@ -322,7 +345,7 @@ queue()
     .orient('right')
     .tickSize(130) // Tick size controls the width of the svg lines used as ticks
     .tickFormat(function (d) {
-      return d3.format("5d")(d) + ((!d) ? " Km" : "");
+      return d + ((!d) ? " Km" : "");
     })
     .ticks(12);
 
@@ -581,7 +604,11 @@ function drawBar(bar, d) {
   bar.select("rect")
     .transition()
     .attr("y", inverseLinearScale(d.totalDistance))
-    .attr("height", linearScale(d.totalDistance) - 63);
+    .attr("height", function () {
+      var height = linearScale(d.totalDistance) - 80;
+      height = (height < 0) ? 0 : height;
+      return height;
+    });
   bar.select("text.bar_details")
     .transition()
     .attr("x", 30)

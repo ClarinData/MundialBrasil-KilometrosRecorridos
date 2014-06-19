@@ -259,9 +259,6 @@ use.concentration.marker.selected, use.concentration.marker.over {
 
 #container {
 	width: 399pt;
-	/*height: 640px;*/
-	/*width: 56%;*/
-	/*height: 50em;*/
 	height: 40em;
 	margin: 0 1em auto 0;
 	float: left;
@@ -390,6 +387,7 @@ line.over {
 	font-family: RobotoCondensed;
 	font-size: 10pt;
 	text-transform: uppercase;
+	text-align: left;
 }
 
 .axis path {
@@ -403,15 +401,21 @@ line.over {
 	stroke-dasharray: 2, 2;
 }
 
+#barAxis {
+	height: 100%;
+}
+
 #bar1 {
 	fill: #00ACE4;
 	stroke: none;
+	height: 100%;
 	margin-left: calc(-100% - 1.5em);
 }
 
 #bar2 {
 	fill: gray;
 	stroke: none;
+	height: 100%;
 	margin-left: calc(-90% + 1.5em);
 }
 
