@@ -432,7 +432,7 @@ queue()
     var boxes = d3.selectAll("g.tooltip");
     boxes.remove();
     var xOffset = 41,
-      yOffset = -10,
+      yOffset = 90,
       boxWidth = 160,
       boxHeight = 62.104;
     var markers = d3.selectAll("use[id^=concentration]:not(.disabled),use[id^=stadium]:not(.disabled)");
