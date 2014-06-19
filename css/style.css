@@ -229,7 +229,7 @@ use.concentration.marker {
 	fill-opacity: .75;
 }
 
-use.concentration.marker.selected, use.concentration.marker.over {
+use.concentration.marker.selected {
 	animation: blink 1s ease-out 0s infinite normal;
 	-webkit-animation: blink 1s ease-out 0s infinite normal;
 }
