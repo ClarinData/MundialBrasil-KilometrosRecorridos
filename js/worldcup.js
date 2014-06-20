@@ -431,12 +431,12 @@ queue()
       .classed("over", false);
     var boxes = d3.selectAll("g.tooltip");
     boxes.remove();
-    var xOffset = 41,
-      yOffset = 90,
-      boxWidth = 160,
-      boxHeight = 62.104;
     var markers = d3.selectAll("use[id^=concentration]:not(.disabled),use[id^=stadium]:not(.disabled)");
     markers.each(function(s, i) {
+      var xOffset = 41,
+          yOffset = (s.domain == "concentration") ? 80 : -10,
+          boxWidth = 160,
+          boxHeight = 62.104;
       if (s.selected && d) {
         var marker = d3.select(this),
           thisTooltip = tooltips.datum(function() {
