@@ -1,6 +1,6 @@
 ﻿{
 	"Argentina": {
-		"group": "a",
+		"group": "F",
 		"concentration" : "Vespasiano",
 		"games": [{
 			"oponent": "Bosnia y Herzegovina",
@@ -17,7 +17,7 @@
 		}]
 	},
 	"Bélgica": {
-		"group": "a",
+		"group": "H",
 		"concentration" : "Mogi Das Cruzes",
 		"games": [{
 			"oponent": "Argelia",
@@ -34,7 +34,7 @@
 		}]
 	},
 	"Argelia": {
-		"group": "a",
+		"group": "H",
 		"concentration" : "Sorocaba",
 		"games": [{
 			"oponent": "Bélgica",
@@ -51,7 +51,7 @@
 		}]
 	},
 	"Rusia": {
-		"group": "a",
+		"group": "H",
 		"concentration" : "Itu",
 		"games": [{
 			"oponent": "Corea del Sur",
@@ -68,7 +68,7 @@
 		}]
 	},
 	"Irán": {
-		"group": "a",
+		"group": "F",
 		"concentration" : "San Pablo",
 		"games": [{
 			"oponent": "Nigeria",
@@ -85,7 +85,7 @@
 		}]
 	},
 	"Chile": {
-		"group": "a",
+		"group": "B",
 		"concentration" : "Belo Horizonte",
 		"games": [{
 			"oponent": "Australia",
@@ -102,7 +102,7 @@
 		}]
 	},
 	"Nigeria": {
-		"group": "a",
+		"group": "F",
 		"concentration" : "Campinas",
 		"games": [{
 			"oponent": "Irán",
@@ -119,7 +119,7 @@
 		}]
 	},
 	"España": {
-		"group": "a",
+		"group": "B",
 		"concentration" : "Curitiba",
 		"games": [{
 			"oponent": "Holanda",
@@ -136,7 +136,7 @@
 		}]
 	},
 	"Corea del Sur": {
-		"group": "a",
+		"group": "H",
 		"concentration" : "Foz de Iguazú",
 		"games": [{
 			"oponent": "Rusia",
@@ -153,7 +153,7 @@
 		}]
 	},
 	"Grecia": {
-		"group": "a",
+		"group": "C",
 		"concentration" : "Aracaju",
 		"games": [{
 			"oponent": "Colombia",
@@ -170,7 +170,7 @@
 		}]
 	},
 	"Ghana": {
-		"group": "a",
+		"group": "G",
 		"concentration" : "Maceió",
 		"games": [{
 			"oponent": "Estados Unidos",
@@ -187,7 +187,7 @@
 		}]
 	},
 	"Colombia": {
-		"group": "a",
+		"group": "C",
 		"concentration" : "Cotia",
 		"games": [{
 			"oponent": "Grecia",
@@ -204,7 +204,7 @@
 		}]
 	},
 	"Holanda": {
-		"group": "a",
+		"group": "B",
 		"concentration" : "Río de Janeiro",
 		"games": [{
 			"oponent": "España",
@@ -221,7 +221,7 @@
 		}]
 	},
 	"Francia": {
-		"group": "a",
+		"group": "E",
 		"concentration" : "Ribeirão Preto",
 		"games": [{
 			"oponent": "Honduras",
@@ -238,7 +238,7 @@
 		}]
 	},
 	"Alemania": {
-		"group": "a",
+		"group": "G",
 		"concentration" : "Santo André",
 		"games": [{
 			"oponent": "Portugal",
@@ -255,7 +255,7 @@
 		}]
 	},
 	"Ecuador": {
-		"group": "a",
+		"group": "E",
 		"concentration" : "Viamão",
 		"games": [{
 			"oponent": "Suiza",
@@ -272,7 +272,7 @@
 		}]
 	},
 	"Bosnia y Herzegovina": {
-		"group": "a",
+		"group": "F",
 		"concentration" : "Guaruja",
 		"games": [{
 			"oponent": "Argentina",
@@ -289,7 +289,7 @@
 		}]
 	},
 	"Inglaterra": {
-		"group": "a",
+		"group": "D",
 		"concentration" : "Río de Janeiro",
 		"games": [{
 			"oponent": "Italia",
@@ -306,7 +306,7 @@
 		}]
 	},
 	"Brasil": {
-		"group": "a",
+		"group": "A",
 		"concentration" : "Teresópolis",
 		"games": [{
 			"oponent": "Croacia",
@@ -323,7 +323,7 @@
 		}]
 	},
 	"Honduras": {
-		"group": "a",
+		"group": "E",
 		"concentration" : "Porto Feliz",
 		"games": [{
 			"oponent": "Francia",
@@ -340,7 +340,7 @@
 		}]
 	},
 	"Uruguay": {
-		"group": "a",
+		"group": "D",
 		"concentration" : "Sete Lagoas",
 		"games": [{
 			"oponent": "Costa Rica",
@@ -357,7 +357,7 @@
 		}]
 	},
 	"Australia": {
-		"group": "a",
+		"group": "B",
 		"concentration" : "Vitória",
 		"games": [{
 			"oponent": "Chile",
@@ -374,7 +374,7 @@
 		}]
 	},
 	"Suiza": {
-		"group": "a",
+		"group": "E",
 		"concentration" : "Porto Seguro",
 		"games": [{
 			"oponent": "Ecuador",
@@ -391,7 +391,7 @@
 		}]
 	},
 	"Croacia": {
-		"group": "a",
+		"group": "A",
 		"concentration" : "Mata de São João",
 		"games": [{
 			"oponent": "Brasil",
@@ -408,7 +408,7 @@
 		}]
 	},
 	"Portugal": {
-		"group": "a",
+		"group": "G",
 		"concentration" : "Campinas",
 		"games": [{
 			"oponent": "Alemania",
@@ -425,7 +425,7 @@
 		}]
 	},
 	"Costa Rica": {
-		"group": "a",
+		"group": "D",
 		"concentration" : "Santos",
 		"games": [{
 			"oponent": "Uruguay",
@@ -442,7 +442,7 @@
 		}]
 	},
 	"Camerún": {
-		"group": "a",
+		"group": "A",
 		"concentration" : "Vitória",
 		"games": [{
 			"oponent": "México",
@@ -459,7 +459,7 @@
 		}]
 	},
 	"Costa de Marfil": {
-		"group": "a",
+		"group": "C",
 		"concentration" : "Aguas de Lindoia",
 		"games": [{
 			"oponent": "Japón",
@@ -476,7 +476,7 @@
 		}]
 	},
 	"Japón": {
-		"group": "a",
+		"group": "C",
 		"concentration" : "Itu",
 		"games": [{
 			"oponent": "Costa de Marfil",
@@ -493,7 +493,7 @@
 		}]
 	},
 	"México": {
-		"group": "a",
+		"group": "A",
 		"concentration" : "Santos",
 		"games": [{
 			"oponent": "Camerún",
@@ -510,7 +510,7 @@
 		}]
 	},
 	"Italia": {
-		"group": "a",
+		"group": "D",
 		"concentration" : "Mangaratiba",
 		"games": [{
 			"oponent": "Inglaterra",
@@ -527,7 +527,7 @@
 		}]
 	},
 	"Estados Unidos": {
-		"group": "a",
+		"group": "G",
 		"concentration" : "San Pablo",
 		"games": [{
 			"oponent": "Ghana",

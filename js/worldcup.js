@@ -300,7 +300,12 @@ queue()
         menu.event = d3.dispatch("selected", "mouseover", "mouseout", "menuout");
         (function(menuitems) {
           menuitems.nodes = (function(nodes) {
-            nodes.append("div")
+            nodes
+              .append("div")
+              .attr("class", function(d) {
+                return "Group" + d.group;
+              })
+              .append("div")
               .attr("class", function(d) {
                 return "menuitem radio " + d.team.replace(/\s+|\.+/g, "_");
               })
@@ -347,9 +352,6 @@ queue()
     };
     var menu = {};
     var data = d3.keys(json[2])
-      .sort(function(a, b) {
-        return (a.toLowerCase() > b.toLowerCase()) ? 1 : ((a.toLowerCase() < b.toLowerCase()) ? -1 : 0);
-      })
       .map(function(entry) {
         json[2][entry].team = entry;
         json[2][entry].totalDistance = (json[2][entry].games
@@ -360,6 +362,9 @@ queue()
             return prevDist + currentDist;
           })) * 2;
         return json[2][entry];
+      })
+      .sort(function(a, b) {
+        return ((a.group.toLowerCase() > b.group.toLowerCase()) ? 1 : ((a.group.toLowerCase() < b.group.toLowerCase()) ? -1 : 0));
       });
 
     var maxDistance = d3.max(data, function(d) {

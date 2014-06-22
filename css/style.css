@@ -144,21 +144,50 @@ div#teamActive.menuitem label:after {
 	vertical-align:	middle;
 	background-color: #E6E6E6;
 	color: black;
-	border-color: white;
-	border-style: solid;
-	border-top-width: 0.1em;
-	border-bottom-width: 0.1em;
-
-/*	margin-top: 0.2em;
-	margin-bottom: 0.2em;*/
-	margin-right: 1em;
-	padding: 0 0.5em 0 0.5em;
-	font-size: 10.5pt;
-	font-family: RobotoCondensed;
+	border-left-width: 0;
+	margin-left: 0.5em;
+	padding-left: 0.5em;
 	text-transform: uppercase;
 	clear: both;
 	overflow: hidden;
 	cursor:pointer;
+}
+
+div[class ^=Group] {
+	vertical-align:	middle;
+	font-size: 10.5pt;
+	font-family: RobotoCondensed;
+	border-color: white;
+	border-style: solid;
+	border-top-width: 0em;
+	border-bottom-width: 0.2em;
+	padding: 0 0 0 0;
+	margin-right: 1em;
+}
+
+div.GroupA {
+	background-color: green;
+}
+div.GroupB {
+	background-color: red;
+}
+div.GroupC {
+	background-color: blue;
+}
+div.GroupD {
+	background-color: violet;
+}
+div.GroupE {
+	background-color: yellow;
+}
+div.GroupF {
+	background-color: brown;
+}
+div.GroupG {
+	background-color: orange;
+}
+div.GroupH {
+	background-color: purple;
 }
 
 .menuitem:hover {
