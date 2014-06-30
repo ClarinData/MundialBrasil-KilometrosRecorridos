@@ -11,7 +11,8 @@
 	}
 }
 
-@-webkit-keyframes blink { /* Safari and Chrome */
+/* Safari and Chrome */
+@-webkit-keyframes blink {
 	from {
 		stroke-width: 1px;
 		stroke-opacity: .8;
@@ -86,7 +87,7 @@ header {
     height: 6.7em;
 }
 aside {
-    width: 150pt;
+    width: 190pt;
     float: left;
     border-right: dashed;
     border-spacing: 1pt;
@@ -235,7 +236,6 @@ svg {
 	fill: none;
 	stroke: white;
 	stroke-width: 1px;
-	/*fill-opacity: .5;*/
 }
 
 .boundary {
@@ -246,9 +246,8 @@ svg {
 
 use.stadium.marker {
 	fill: red;
-/*	stroke: white;
-	stroke-width: 1px;*/
 	fill-opacity: .75;
+	cursor: help;
 }
 
 use.concentration.marker {
@@ -287,7 +286,7 @@ use.concentration.marker.selected {
 }
 
 #container {
-	width: 399pt;
+	width: 359pt;
 	height: 40em;
 	margin: 0 1em auto 0;
 	float: left;
