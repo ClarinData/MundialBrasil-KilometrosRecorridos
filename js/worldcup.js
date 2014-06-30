@@ -36,7 +36,7 @@ var projection = d3.geo.mercator()
   .center([0, -15])
   .rotate([52, 0])
   .scale((height * 74) / 55)
-  .translate([width / 2, height / 2]);
+  .translate([width / 2 - 50, height / 2]);
 var path = d3.geo.path()
   .projection(projection);
 var tile = d3.geo.tile()
@@ -78,7 +78,7 @@ var geoRef = {
   concentration: {}
 };
 
-var barSize = [70, 665];
+var barSize = [150, 665];
 var weather = {};
 var stad = definitions
   .append("g")
@@ -124,31 +124,31 @@ definitions
     var bar1title = entry.append("text")
       .attr({
         "x": 30,
-        "y": 622,
+        "y": barSize[1]-43,
         "class": "bar_title"
       });
-
+    var matrix = "matrix(1 0 0 1 0 " + (parseFloat(barSize[1])-126) + ")";
     entry.append("use")
       .attr({
         "class": "bar_icon",
         "xlink:href": "#plane",
-        "transform": "matrix(1 0 0 1 0 539)"
+        "transform": matrix
       });
 
     entry.append("text")
       .attr({
         "x": 30,
-        "y": 649,
+        "y": barSize[1]-16,
         "class": "bar_details"
       })
       .text("0 KM");
   });
 
 var linearScale = function() {
-    return 136;
+    return barSize[0];
   },
   inverseLinearScale = function() {
-    return 136;
+    return barSize[0];
   };
 
 // Data process
@@ -515,7 +515,7 @@ queue()
                 // ((s.domain == "stadium") ? (-xOffset - boxWidth) : xOffset);
                 p.y = parseFloat(p.attr("y")) - boxHeight - 10;
                 p.y = (p.y < 0 || p.y > (height - boxHeight - 10)) ? height - boxHeight + yOffset : p.y + yOffset;
-                p.x = (p.x < 0 || p.x > (width - boxWidth - 10)) ? width - boxWidth - 10 : p.x;
+                p.x = (p.x > (width - boxWidth - 10)) ? width - boxWidth - 10 : ((p.x < 10) ? 10 : p.x);
                 p.anchor = {
                   w: [p.x, p.y + p.height / 2],
                   n: [p.x + p.width / 2, p.y],
@@ -685,7 +685,7 @@ function drawBar(bar, d) {
     .attr({
       "y": inverseLinearScale(d.totalDistance),
       "height": function() {
-        var height = linearScale(d.totalDistance) - 80;
+        var height = linearScale(d.totalDistance) - (barSize[1] + 10);
         height = (height < 0) ? 0 : height;
         return height;
       }
