@@ -36,7 +36,7 @@ var projection = d3.geo.mercator()
   .center([0, -15])
   .rotate([52, 0])
   .scale((height * 74) / 55)
-  .translate([width / 2 - 50, height / 2]);
+  .translate([width / 2, height / 2]);
 var path = d3.geo.path()
   .projection(projection);
 var tile = d3.geo.tile()
@@ -78,24 +78,63 @@ var geoRef = {
   concentration: {}
 };
 
-var barSize = [150, 665];
+var barSize = [70, 600];
 var weather = {};
 var stad = definitions
   .append("g")
   .attr({
     "id": "stadium-marker",
-    "transform": "translate(-8,-19)"
+    "transform": "translate(-10,-10)"
   }); // Concentration place marker
-stad.append("path")
+
+stad.append("circle")
   .attr({
-    "d": "M16,8c0-4.4-3.6-8-8-8C3.6,0,0,3.6,0,8c0,3.1,1.7,5.7,4.3,7.1l3.7,4l3.7-4C14.3,13.7,16,11.1,16,8z M8,13c-2.8,0-5-2.2-5-5s2.2-5,5-5c2.8,0,5,2.2,5,5S10.8,13,8,13z",
-    "fill": "black"
+    "cx": 11.614,
+    "cy": 11.614,
+    "r": 10,
+    "fill": "#73C5E4",
+    //"fill-opacity":"0",
+    "stroke": "white",
+    "stroke-width": "1.5px"
   });
-stad.append("path")
+
+
+stad.append("circle")
   .attr({
-    "d": "M8,14.5c-3.6,0-6.5-2.9-6.5-6.5S4.4,1.5,8,1.5c3.6,0,6.5,2.9,6.5,6.5S11.6,14.5,8,14.5z",
-    "fill": "white"
+    "cx": 11.614,
+    "cy": 11.614,
+    "r": 7,
+    "fill": "black",
+    "fill-opacity": ".7",
+    "stroke": "white",
+    "stroke-width": "1.5px"
   });
+
+/*
+stad.append("line")
+  .attr({
+  	"x1":"11.614",
+  	"y1":"6.562", 
+  	"x2":"11.614", 
+  	"y2":"17.182",
+  	"fill": "#ffffff",
+  	"stroke":"white",
+  	"stroke-width":"2px" 
+  });
+
+stad.append("line")
+  .attr({
+  	"x1":"16.925",
+  	"y1":"11.871", 
+  	"x2":"6.305", 
+  	"y2":"11.871",
+  	"fill": "#ffffff",
+  	"stroke":"white",
+  	"stroke-width":"2px" 
+  });  
+*/
+
+
 definitions
   .append("g")
   .attr("id", "concentration-marker") // Concentration place marker
@@ -103,7 +142,7 @@ definitions
   .attr({
     "cx": 0,
     "cy": 0,
-    "r": 5
+    "r": 4
   });
 definitions
   .append("g")
@@ -127,6 +166,7 @@ definitions
         "y": barSize[1]-43,
         "class": "bar_title"
       });
+
     var matrix = "matrix(1 0 0 1 0 " + (parseFloat(barSize[1])-126) + ")";
     entry.append("use")
       .attr({
@@ -142,13 +182,15 @@ definitions
         "class": "bar_details"
       })
       .text("0 KM");
+
   });
 
+
 var linearScale = function() {
-    return barSize[0];
+    return 136;
   },
   inverseLinearScale = function() {
-    return barSize[0];
+    return 136;
   };
 
 // Data process
@@ -268,19 +310,19 @@ queue()
             .classed("disabled", function() {
               return d.domain != "concentration";
             });
+          /*
           var oponent = (d.oponent) ? d3.select("div.menuitem." + d.oponent.replace(/\s+|\.+/g, "_")).data()[0] : null;
-          drawBar(bar2, {
-            team: d.oponent,
-            totalDistance: (oponent || {
-              totalDistance: 0
-            }).totalDistance
-          });
+                   drawBar(bar2, {
+                     team: d.oponent,
+                     totalDistance: (oponent || {
+                       totalDistance: 0
+                     }).totalDistance
+                   });*/
+
           d3.json("http://api.openweathermap.org/data/2.5/weather?lang=sp&units=metric&lat=" +
             d.geometry.coordinates[1] + "&lon=" + d.geometry.coordinates[0], function(weather) {
-              thisTooltip.select(".temp.min")
-                .text("Min: " + Math.round(weather.main.temp_min) + "°C");
               thisTooltip.select(".temp.max")
-                .text("Max: " + Math.round(weather.main.temp_max) + "°C");
+                .text("Temperatura max: " + Math.round(weather.main.temp_max) + "°C");
             });
         },
         "mouseout": function(d) {
@@ -294,12 +336,12 @@ queue()
           });
         }
       });
-    d3.select(self.frameElement).style("height", height + "px");
     var bpMenu = function(selector, data) {
       var menu = (function(menu) {
         menu.event = d3.dispatch("selected", "mouseover", "mouseout", "menuout");
         (function(menuitems) {
           menuitems.nodes = (function(nodes) {
+            console.log(nodes);
             nodes
               .append("div")
               .attr("class", function(d) {
@@ -363,9 +405,11 @@ queue()
           })) * 2;
         return json[2][entry];
       })
+      /*
       .sort(function(a, b) {
-        return ((a.group.toLowerCase() > b.group.toLowerCase()) ? 1 : ((a.group.toLowerCase() < b.group.toLowerCase()) ? -1 : 0));
-      });
+              return ((a.group.toLowerCase() > b.group.toLowerCase()) ? 1 : ((a.group.toLowerCase() < b.group.toLowerCase()) ? -1 : 0));
+            });*/
+
 
     var maxDistance = d3.max(data, function(d) {
       return d.totalDistance;
@@ -474,9 +518,9 @@ queue()
       var markers = d3.selectAll("use[id^=concentration]:not(.disabled),use[id^=stadium]:not(.disabled)");
       markers.each(function(s, i) {
         var xOffset = 41,
-          yOffset = (s.domain == "concentration") ? 80 : -10,
-          boxWidth = 160,
-          boxHeight = 62.104;
+          yOffset = (s.domain == "concentration") ? 83 : -10,
+          boxWidth = 110,
+          boxHeight = 60;
         if (s.selected && d) {
           var marker = d3.select(this),
             thisTooltip = tooltips.datum(function() {
@@ -515,7 +559,7 @@ queue()
                 // ((s.domain == "stadium") ? (-xOffset - boxWidth) : xOffset);
                 p.y = parseFloat(p.attr("y")) - boxHeight - 10;
                 p.y = (p.y < 0 || p.y > (height - boxHeight - 10)) ? height - boxHeight + yOffset : p.y + yOffset;
-                p.x = (p.x > (width - boxWidth - 10)) ? width - boxWidth - 10 : ((p.x < 10) ? 10 : p.x);
+                p.x = (p.x < 0 || p.x > (width - boxWidth - 10)) ? width - boxWidth - 10 : p.x;
                 p.anchor = {
                   w: [p.x, p.y + p.height / 2],
                   n: [p.x + p.width / 2, p.y],
@@ -573,38 +617,34 @@ queue()
             thisBox.append("rect")
               .attr({
                 "class": "box distance disable-hover",
-                "x": 105,
-                "y": 0,
+                "x": 5,
+                "y": 27,
                 "width": 55,
-                "height": 31
+                "height": 20
               });
             //Team text
             thisBox.append("text")
               .attr({
                 "class": "distance disable-hover",
-                "x": 112,
-                "y": 20
+                "x": 9,
+                "y": 42
               })
               .text(function(p) {
                 var index = d.stadiums.indexOf(s.name);
                 return d.games[index].distance + " Km";
               });
             //Temp text
-            thisBox.append("text")
-              .attr({
-                "class": "temp min disable-hover",
-                "x": 20,
-                "y": 52
-              })
-              .text("Min: N/D");
+            // Aca borre el chain del txt de las temperaturas minimas!
             //Temp text
+            /*
             thisBox.append("text")
-              .attr({
-                "class": "temp max disable-hover",
-                "x": 85,
-                "y": 52
-              })
-              .text("Max: N/D");
+                          .attr({
+                            "class": "temp max disable-hover",
+                            "x": 85,
+                            "y": 52
+                          })
+                          .text("Temperatura max: N/D");*/
+
           }
         }
       })
@@ -685,7 +725,7 @@ function drawBar(bar, d) {
     .attr({
       "y": inverseLinearScale(d.totalDistance),
       "height": function() {
-        var height = linearScale(d.totalDistance) - (barSize[1] + 10);
+        var height = linearScale(d.totalDistance) - 80;
         height = (height < 0) ? 0 : height;
         return height;
       }
