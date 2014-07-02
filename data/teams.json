@@ -1,7 +1,7 @@
 ﻿{
 	"Brasil": {
 		"group": "A",
-		"concentration" : "Teresópolis",
+		"concentration": "Teresópolis",
 		"games": [{
 			"oponent": "Croacia",
 			"stadium": "San Pablo",
@@ -16,10 +16,10 @@
 			"distance": 1998
 		}]
 	},
-	
-		"Chile": {
+
+	"Chile": {
 		"group": "A",
-		"concentration" : "Belo Horizonte",
+		"concentration": "Belo Horizonte",
 		"games": [{
 			"oponent": "Australia",
 			"stadium": "Cuiabá",
@@ -34,10 +34,10 @@
 			"distance": 1056
 		}]
 	},
-	
+
 	"Croacia": {
 		"group": "B",
-		"concentration" : "Mata de São João",
+		"concentration": "Mata de São João",
 		"games": [{
 			"oponent": "Brasil",
 			"stadium": "San Pablo",
@@ -52,10 +52,10 @@
 			"distance": 1410
 		}]
 	},
-	
-		"Camerún": {
+
+	"Camerún": {
 		"group": "B",
-		"concentration" : "Vitória",
+		"concentration": "Vitória",
 		"games": [{
 			"oponent": "México",
 			"stadium": "Natal",
@@ -70,12 +70,12 @@
 			"distance": 1900
 		}]
 	},
-	
-	
-	
+
+
+
 	"Colombia": {
 		"group": "A",
-		"concentration" : "Cotia",
+		"concentration": "Cotia",
 		"games": [{
 			"oponent": "Grecia",
 			"stadium": "Belo Horizonte",
@@ -90,10 +90,10 @@
 			"distance": 2656
 		}]
 	},
-	
+
 	"Uruguay": {
 		"group": "A",
-		"concentration" : "Sete Lagoas",
+		"concentration": "Sete Lagoas",
 		"games": [{
 			"oponent": "Costa Rica",
 			"stadium": "Fortaleza",
@@ -108,12 +108,12 @@
 			"distance": 3670
 		}]
 	},
-	
-		
-	
+
+
+
 	"Portugal": {
 		"group": "B",
-		"concentration" : "Campinas",
+		"concentration": "Campinas",
 		"games": [{
 			"oponent": "Alemania",
 			"stadium": "Salvador (Bahia)",
@@ -129,9 +129,9 @@
 		}]
 	},
 
-"Ghana": {
+	"Ghana": {
 		"group": "B",
-		"concentration" : "Maceió",
+		"concentration": "Maceió",
 		"games": [{
 			"oponent": "Estados Unidos",
 			"stadium": "Natal",
@@ -146,11 +146,11 @@
 			"distance": 3034
 		}]
 	},
-	
-	
-		"Holanda": {
+
+
+	"Holanda": {
 		"group": "A",
-		"concentration" : "Río de Janeiro",
+		"concentration": "Río de Janeiro",
 		"games": [{
 			"oponent": "España",
 			"stadium": "Salvador (Bahia)",
@@ -165,11 +165,11 @@
 			"distance": 726
 		}]
 	},
-	
-	
+
+
 	"México": {
 		"group": "A",
-		"concentration" : "Santos",
+		"concentration": "Santos",
 		"games": [{
 			"oponent": "Camerún",
 			"stadium": "Natal",
@@ -184,14 +184,12 @@
 			"distance": 4394
 		}]
 	},
-	
-		
-	
 
-	
+
+
 	"Bosnia y Herzegovina": {
 		"group": "B",
-		"concentration" : "Guaruja",
+		"concentration": "Guaruja",
 		"games": [{
 			"oponent": "Argentina",
 			"stadium": "Río de Janeiro",
@@ -206,10 +204,10 @@
 			"distance": 3122
 		}]
 	},
-	
+
 	"Irán": {
 		"group": "B",
-		"concentration" : "San Pablo",
+		"concentration": "San Pablo",
 		"games": [{
 			"oponent": "Nigeria",
 			"stadium": "Curitiba",
@@ -224,11 +222,11 @@
 			"distance": 2906
 		}]
 	},
-	
-	
-		"Costa Rica": {
+
+
+	"Costa Rica": {
 		"group": "A",
-		"concentration" : "Santos",
+		"concentration": "Santos",
 		"games": [{
 			"oponent": "Uruguay",
 			"stadium": "Fortaleza",
@@ -243,11 +241,11 @@
 			"distance": 1196
 		}]
 	},
-	
-	
+
+
 	"Grecia": {
 		"group": "A",
-		"concentration" : "Aracaju",
+		"concentration": "Aracaju",
 		"games": [{
 			"oponent": "Colombia",
 			"stadium": "Belo Horizonte",
@@ -262,13 +260,12 @@
 			"distance": 1648
 		}]
 	},
-	
-	
-	
-	
+
+
+
 	"Ecuador": {
 		"group": "B",
-		"concentration" : "Viamão",
+		"concentration": "Viamão",
 		"games": [{
 			"oponent": "Suiza",
 			"stadium": "Brasilia",
@@ -283,11 +280,11 @@
 			"distance": 2292
 		}]
 	},
-	
-	
+
+
 	"Honduras": {
 		"group": "B",
-		"concentration" : "Porto Feliz",
+		"concentration": "Porto Feliz",
 		"games": [{
 			"oponent": "Francia",
 			"stadium": "Porto Alegre",
@@ -302,12 +299,12 @@
 			"distance": 5348
 		}]
 	},
-	
-	
-	
-		"Francia": {
+
+
+
+	"Francia": {
 		"group": "A",
-		"concentration" : "Ribeirão Preto",
+		"concentration": "Ribeirão Preto",
 		"games": [{
 			"oponent": "Honduras",
 			"stadium": "Porto Alegre",
@@ -322,11 +319,11 @@
 			"distance": 1026
 		}]
 	},
-	
-			
+
+
 	"Nigeria": {
 		"group": "A",
-		"concentration" : "Campinas",
+		"concentration": "Campinas",
 		"games": [{
 			"oponent": "Irán",
 			"stadium": "Curitiba",
@@ -341,13 +338,12 @@
 			"distance": 1780
 		}]
 	},
-	
-	
-	
-	
-		"Italia": {
+
+
+
+	"Italia": {
 		"group": "B",
-		"concentration" : "Mangaratiba",
+		"concentration": "Mangaratiba",
 		"games": [{
 			"oponent": "Inglaterra",
 			"stadium": "Manaos",
@@ -362,10 +358,10 @@
 			"distance": 4324
 		}]
 	},
-	
+
 	"Inglaterra": {
 		"group": "B",
-		"concentration" : "Río de Janeiro",
+		"concentration": "Río de Janeiro",
 		"games": [{
 			"oponent": "Italia",
 			"stadium": "Manaos",
@@ -380,12 +376,12 @@
 			"distance": 724
 		}]
 	},
-	
-	
-	
+
+
+
 	"Alemania": {
 		"group": "A",
-		"concentration" : "Santo André",
+		"concentration": "Santo André",
 		"games": [{
 			"oponent": "Portugal",
 			"stadium": "Salvador (Bahia)",
@@ -400,10 +396,10 @@
 			"distance": 2074
 		}]
 	},
-	
+
 	"Argelia": {
 		"group": "A",
-		"concentration" : "Sorocaba",
+		"concentration": "Sorocaba",
 		"games": [{
 			"oponent": "Bélgica",
 			"stadium": "Belo Horizonte",
@@ -418,11 +414,11 @@
 			"distance": 882
 		}]
 	},
-	
-	
-		"Costa de Marfil": {
+
+
+	"Costa de Marfil": {
 		"group": "B",
-		"concentration" : "Aguas de Lindoia",
+		"concentration": "Aguas de Lindoia",
 		"games": [{
 			"oponent": "Japón",
 			"stadium": "Recife",
@@ -437,11 +433,11 @@
 			"distance": 4910
 		}]
 	},
-	
-	
+
+
 	"Japón": {
 		"group": "B",
-		"concentration" : "Itu",
+		"concentration": "Itu",
 		"games": [{
 			"oponent": "Costa de Marfil",
 			"stadium": "Recife",
@@ -456,13 +452,11 @@
 			"distance": 2576
 		}]
 	},
-	
 
-	
-	
+
 	"Argentina": {
 		"group": "A",
-		"concentration" : "Vespasiano",
+		"concentration": "Vespasiano",
 		"games": [{
 			"oponent": "Bosnia y Herzegovina",
 			"stadium": "Río de Janeiro",
@@ -477,11 +471,11 @@
 			"distance": 2770
 		}]
 	},
-	
-		
+
+
 	"Suiza": {
 		"group": "A",
-		"concentration" : "Porto Seguro",
+		"concentration": "Porto Seguro",
 		"games": [{
 			"oponent": "Ecuador",
 			"stadium": "Brasilia",
@@ -496,11 +490,11 @@
 			"distance": 5488
 		}]
 	},
-	
-	
-		"España": {
+
+
+	"España": {
 		"group": "B",
-		"concentration" : "Curitiba",
+		"concentration": "Curitiba",
 		"games": [{
 			"oponent": "Holanda",
 			"stadium": "Salvador (Bahia)",
@@ -515,10 +509,10 @@
 			"distance": 36
 		}]
 	},
-	
+
 	"Australia": {
 		"group": "B",
-		"concentration" : "Vitória",
+		"concentration": "Vitória",
 		"games": [{
 			"oponent": "Chile",
 			"stadium": "Cuiabá",
@@ -533,11 +527,11 @@
 			"distance": 2178
 		}]
 	},
-	
-	
-		"Bélgica": {
+
+
+	"Bélgica": {
 		"group": "A",
-		"concentration" : "Mogi Das Cruzes",
+		"concentration": "Mogi Das Cruzes",
 		"games": [{
 			"oponent": "Argelia",
 			"stadium": "Belo Horizonte",
@@ -552,11 +546,11 @@
 			"distance": 128
 		}]
 	},
-	
-	
+
+
 	"Estados Unidos": {
 		"group": "A",
-		"concentration" : "San Pablo",
+		"concentration": "San Pablo",
 		"games": [{
 			"oponent": "Ghana",
 			"stadium": "Natal",
@@ -571,14 +565,12 @@
 			"distance": 4122
 		}]
 	},
-	
-	
-	
+
 
 
 	"Rusia": {
 		"group": "B",
-		"concentration" : "Itu",
+		"concentration": "Itu",
 		"games": [{
 			"oponent": "Corea del Sur",
 			"stadium": "Cuiabá",
@@ -593,11 +585,11 @@
 			"distance": 802
 		}]
 	},
-	
+
 
 	"Corea del Sur": {
 		"group": "B",
-		"concentration" : "Foz de Iguazú",
+		"concentration": "Foz de Iguazú",
 		"games": [{
 			"oponent": "Rusia",
 			"stadium": "Cuiabá",
@@ -612,6 +604,6 @@
 			"distance": 1712
 		}]
 	}
-	
+
 
 }
