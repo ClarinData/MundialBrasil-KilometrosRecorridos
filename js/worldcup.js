@@ -620,8 +620,17 @@ queue()
                 "y": 57
               })
               .text(function(p) {
-                var index = d.stadiums.indexOf(s.name),
-                    match = d.team + "  vs.  " + d.games[index].oponent;
+                var opponents = d.games.map(function (v,i,a) {
+                                  return (v.stadium == s.name) ? v.oponent : null;
+                                }).reduce(function (p,c) {
+                                  p = (Array.isArray(p)) ? p : (p) ? [p] : [];
+                                  if (c) {
+                                    p.push(c);
+                                  }
+                                  return p;
+                                }).join(" / "),
+                    match = d.team + "  vs.  " + opponents;
+                console.log(s.name,d.games, opponents)
                 containerbox.attr({
                   "width": Math.max(match.length * 5 + 6, boxWidth)
                 });
