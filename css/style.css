@@ -60,7 +60,7 @@
     text-rendering: optimizeLegibility;
 }
 
-article, section, aside, hgroup, nav, header, footer, figure, figcaption { 
+article, section, #leftsidebar, hgroup, nav, header, footer, figure, figcaption { 
     display: block;
 }
 
@@ -73,12 +73,6 @@ body {
     margin-top: 0px;
     width: 100%;
     height: 100%;
-}
-
-aside {
-	height: 672px;
-	
-	
 }
 
 #cierreMenu {
@@ -104,8 +98,8 @@ h1 {
 #elegi {
 	font-family: RobotoCondensed;
 	font-size: 0.96em;
-	padding-top: 1.3em;
-	padding-bottom: 2em;
+	padding-top: 0.7em;
+	padding-bottom: 2.7em;
 	margin-right:0.9em;
 	border-top: 1px solid #CCCCCC;
 	text-transform: uppercase;
@@ -154,8 +148,9 @@ img {
 header {
     height: 6.7em;
 }
-aside {
+#leftsidebar {
     width: 150pt;
+    height: 672px;
     float: left;
     border-right: dashed;
     border-spacing: 1pt;
