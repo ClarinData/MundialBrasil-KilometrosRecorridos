@@ -2,6 +2,7 @@
 	"Brasil": {
 		"group": "A",
 		"concentration": "Teresópolis",
+		"status": "in",
 		"games": [{
 			"oponent": "Croacia",
 			"stadium": "San Pablo",
@@ -14,12 +15,17 @@
 			"oponent": "Camerún",
 			"stadium": "Brasilia",
 			"distance": 1998
+		}, {
+			"oponent": "Chile",
+			"stadium": "Belo Horizonte",
+			"distance": 592
 		}]
 	},
 
 	"Chile": {
 		"group": "A",
 		"concentration": "Belo Horizonte",
+		"status": "out",
 		"games": [{
 			"oponent": "Australia",
 			"stadium": "Cuiabá",
@@ -32,12 +38,17 @@
 			"oponent": "Holanda",
 			"stadium": "San Pablo",
 			"distance": 1056
+		}, {
+			"oponent": "Brasil",
+			"stadium": "Belo Horizonte",
+			"distance": 0
 		}]
 	},
 
 	"Croacia": {
 		"group": "B",
 		"concentration": "Mata de São João",
+		"status": "in",
 		"games": [{
 			"oponent": "Brasil",
 			"stadium": "San Pablo",
@@ -76,6 +87,7 @@
 	"Colombia": {
 		"group": "A",
 		"concentration": "Cotia",
+		"status": "in",
 		"games": [{
 			"oponent": "Grecia",
 			"stadium": "Belo Horizonte",
@@ -88,12 +100,17 @@
 			"oponent": "Japón",
 			"stadium": "Cuiabá",
 			"distance": 2656
+		}, {
+			"oponent": "Uruguay",
+			"stadium": "Río de Janeiro",
+			"distance": 774
 		}]
 	},
 
 	"Uruguay": {
 		"group": "A",
 		"concentration": "Sete Lagoas",
+		"status": "out",
 		"games": [{
 			"oponent": "Costa Rica",
 			"stadium": "Fortaleza",
@@ -106,6 +123,10 @@
 			"oponent": "Italia",
 			"stadium": "Natal",
 			"distance": 3670
+		}, {
+			"oponent": "Brasil",
+			"stadium": "Río de Janeiro",
+			"distance": 786
 		}]
 	},
 
@@ -151,6 +172,7 @@
 	"Holanda": {
 		"group": "A",
 		"concentration": "Río de Janeiro",
+		"status": "in",
 		"games": [{
 			"oponent": "España",
 			"stadium": "Salvador (Bahia)",
@@ -163,6 +185,10 @@
 			"oponent": "Chile",
 			"stadium": "San Pablo",
 			"distance": 726
+		}, {
+			"oponent": "México",
+			"stadium": "Fortaleza",
+			"distance": 4358
 		}]
 	},
 
@@ -170,6 +196,7 @@
 	"México": {
 		"group": "A",
 		"concentration": "Santos",
+		"status": "out",
 		"games": [{
 			"oponent": "Camerún",
 			"stadium": "Natal",
@@ -182,6 +209,10 @@
 			"oponent": "Croacia",
 			"stadium": "Recife",
 			"distance": 4394
+		}, {
+			"oponent": "Holanda",
+			"stadium": "Fortaleza",
+			"distance": 4878
 		}]
 	},
 
@@ -227,6 +258,7 @@
 	"Costa Rica": {
 		"group": "A",
 		"concentration": "Santos",
+		"status": "in",
 		"games": [{
 			"oponent": "Uruguay",
 			"stadium": "Fortaleza",
@@ -239,6 +271,10 @@
 			"oponent": "Inglaterra",
 			"stadium": "Belo Horizonte",
 			"distance": 1196
+		}, {
+			"oponent": "Grecia",
+			"stadium": "Recife",
+			"distance": 4294
 		}]
 	},
 
@@ -246,6 +282,7 @@
 	"Grecia": {
 		"group": "A",
 		"concentration": "Aracaju",
+		"status": "out",
 		"games": [{
 			"oponent": "Colombia",
 			"stadium": "Belo Horizonte",
@@ -258,6 +295,10 @@
 			"oponent": "Costa de Marfil",
 			"stadium": "Fortaleza",
 			"distance": 1648
+		}, {
+			"oponent": "Costa Rica",
+			"stadium": "Recife",
+			"distance": 800
 		}]
 	},
 
@@ -305,6 +346,7 @@
 	"Francia": {
 		"group": "A",
 		"concentration": "Ribeirão Preto",
+		"status": "in",
 		"games": [{
 			"oponent": "Honduras",
 			"stadium": "Porto Alegre",
@@ -317,6 +359,10 @@
 			"oponent": "Ecuador",
 			"stadium": "Río de Janeiro",
 			"distance": 1026
+		}, {
+			"oponent": "Nigeria",
+			"stadium": "Brasilia",
+			"distance": 1180
 		}]
 	},
 
@@ -324,6 +370,7 @@
 	"Nigeria": {
 		"group": "A",
 		"concentration": "Campinas",
+		"status": "out",
 		"games": [{
 			"oponent": "Irán",
 			"stadium": "Curitiba",
@@ -336,6 +383,10 @@
 			"oponent": "Argentina",
 			"stadium": "Porto Alegre",
 			"distance": 1780
+		}, {
+			"oponent": "Francia",
+			"stadium": "Brasilia",
+			"distance": 1600
 		}]
 	},
 
@@ -382,6 +433,7 @@
 	"Alemania": {
 		"group": "A",
 		"concentration": "Santo André",
+		"status": "in",
 		"games": [{
 			"oponent": "Portugal",
 			"stadium": "Salvador (Bahia)",
@@ -394,12 +446,17 @@
 			"oponent": "Estados Unidos",
 			"stadium": "Recife",
 			"distance": 2074
+		}, {
+			"oponent": "Argelia",
+			"stadium": "Porto Alegre",
+			"distance": 1692
 		}]
 	},
 
 	"Argelia": {
 		"group": "A",
 		"concentration": "Sorocaba",
+		"status": "out",
 		"games": [{
 			"oponent": "Bélgica",
 			"stadium": "Belo Horizonte",
@@ -412,6 +469,10 @@
 			"oponent": "Rusia",
 			"stadium": "Curitiba",
 			"distance": 882
+		}, {
+			"oponent": "Alemania",
+			"stadium": "Porto Alegre",
+			"distance": 1606
 		}]
 	},
 
@@ -457,6 +518,7 @@
 	"Argentina": {
 		"group": "A",
 		"concentration": "Vespasiano",
+		"status": "in",
 		"games": [{
 			"oponent": "Bosnia y Herzegovina",
 			"stadium": "Río de Janeiro",
@@ -469,6 +531,10 @@
 			"oponent": "Nigeria",
 			"stadium": "Porto Alegre",
 			"distance": 2770
+		}, {
+			"oponent": "Suiza",
+			"stadium": "San Pablo",
+			"distance": 982
 		}]
 	},
 
@@ -476,6 +542,7 @@
 	"Suiza": {
 		"group": "A",
 		"concentration": "Porto Seguro",
+		"status": "out",
 		"games": [{
 			"oponent": "Ecuador",
 			"stadium": "Brasilia",
@@ -488,6 +555,10 @@
 			"oponent": "Honduras",
 			"stadium": "Manaos",
 			"distance": 5488
+		}, {
+			"oponent": "Argentina",
+			"stadium": "San Pablo",
+			"distance": 2228
 		}]
 	},
 
@@ -532,6 +603,7 @@
 	"Bélgica": {
 		"group": "A",
 		"concentration": "Mogi Das Cruzes",
+		"status": "in",
 		"games": [{
 			"oponent": "Argelia",
 			"stadium": "Belo Horizonte",
@@ -544,6 +616,10 @@
 			"oponent": "Corea del Sur",
 			"stadium": "San Pablo",
 			"distance": 128
+		}, {
+			"oponent": "Estados Unidos",
+			"stadium": "Salvador (Bahia)",
+			"distance": 2876
 		}]
 	},
 
@@ -551,6 +627,7 @@
 	"Estados Unidos": {
 		"group": "A",
 		"concentration": "San Pablo",
+		"status": "out",
 		"games": [{
 			"oponent": "Ghana",
 			"stadium": "Natal",
@@ -563,6 +640,10 @@
 			"oponent": "Alemania",
 			"stadium": "Recife",
 			"distance": 4122
+		}, {
+			"oponent": "Bélgica",
+			"stadium": "Salvador (Bahia)",
+			"distance": 2900
 		}]
 	},
 

@@ -1,4 +1,4 @@
-/* KeyFrames */
+﻿/* KeyFrames */
 
 @keyframes blink {
 	from {
@@ -82,7 +82,7 @@ aside {
 }
 
 #cierreMenu {
-	padding-bottom: 53px;
+	
 	margin-right:17px;
 	border-bottom: 1px #CCCCCC solid;
 }
@@ -104,7 +104,7 @@ h1 {
 #elegi {
 	font-family: RobotoCondensed;
 	font-size: 0.96em;
-	padding-top: 0.7em;
+	padding-top: 1.3em;
 	padding-bottom: 2em;
 	margin-right:0.9em;
 	border-top: 1px solid #CCCCCC;
@@ -136,7 +136,7 @@ margin-bottom: 0.7em;
 	font-size: 1.5em;
 	font-family: Roboto;
 	font-weight: bolder;
-	top: 35%;
+	top: 27%;
 	left: 48%;
 	position: absolute;
 	opacity: .3;
@@ -199,26 +199,29 @@ label {
 
 div.menuitem label:after {
 	width: 12pt;
-	height: 12pt;
+	height: 14pt;
 	margin-top: 2pt;
 	float: right;
   	content: url(../image/radio_unchecked.svg);
 }
 
+
+
 div#teamActive.menuitem label:after {
 	width: 12pt;
-	height: 12pt;
+	height: 14pt;
 	margin-top: 2pt;
 	float: right;
   	content: url(../image/radio_checked.svg);
 }
+
 
 .menuitem {
 	vertical-align:	middle;
 	background-color: #E6E6E6;
 	color: black;
 	border-left-width: 0;
-	margin-left: 0.5em;
+	/*margin-left: 0.5em;*/
 	padding-left: 0.5em;
 	text-transform: uppercase;
 	clear: both;
@@ -226,9 +229,14 @@ div#teamActive.menuitem label:after {
 	cursor:pointer;
 }
 
+.menuitem.out {
+	text-decoration:line-through;
+	color:#808080;
+}
+
 div[class ^=Group] {
 	vertical-align:	middle;
-	font-size: 10.5pt;
+	font-size: 12pt;
 	font-family: RobotoCondensed;
 	border-color: white;
 	border-style: solid;
@@ -241,7 +249,7 @@ div[class ^=Group] {
 
 
 div.GroupA {
-	background-color: #00ACE4;
+	background-color: #E6E6E6;
 	
 
 }
@@ -426,7 +434,6 @@ line.over {
 	fill: #FFFFFF;
 	font-family: RobotoCondensedLight;
 	font-size: 9pt;
-	
 }
 
 .tooltip.concentration .type {
@@ -459,15 +466,16 @@ line.over {
 
 .tooltip.stadium .stadium {
 	fill: black;
-	font-family: Roboto;
-	font-size: 8pt;
-	text-transform: uppercase;
+	font-family: RobotoCondensed;
+	font-size: 10pt;
+	/*text-transform: uppercase;*/
+	font-weight:bold;
 }
 
 .tooltip.stadium .opponent {
 	fill: black;
 	font-family: RobotoCondensed;
-	font-size: 7.5pt;
+	font-size: 8pt;
 	text-transform: uppercase;
 }
 
@@ -559,4 +567,98 @@ line.over {
 
 .bar_icon {
 	fill: black;
+}
+
+/* T_Shitrs */
+
+div.menuitem label:before {
+	float: left;
+	width: 12pt;
+	height: 14pt;
+	margin-top: 1px;
+	margin-right:10px;
+	margin-bottom:1px;
+	content: ' ';
+	background:  url(../image/t-shirts.png);
+}
+
+div.menuitem.alemania label:before {
+	background-position: 0 0;
+	width: 15px;
+	height: 17px;
+}
+div.menuitem.argelia label:before {
+	background-position: -16px 0;
+	width: 15px;
+	height: 17px;
+}
+div.menuitem.argentina label:before {
+	background-position: -32px 0;
+	width: 15px;
+	height: 17px;
+}
+div.menuitem.bélgica label:before {
+	background-position: -48px 0;
+	width: 15px;
+	height: 17px;
+}
+div.menuitem.brasil label:before {
+	background-position: -64px 0;
+	width: 15px;
+	height: 17px;
+}
+div.menuitem.chile label:before {
+	background-position: -80px 0;
+	width: 15px;
+	height: 17px;
+}
+div.menuitem.colombia label:before {
+	background-position: -96px 0;
+	width: 15px;
+	height: 17px;
+}
+div.menuitem.costa_rica label:before {
+	background-position: -112px 0;
+	width: 15px;
+	height: 17px;
+}
+div.menuitem.estados_unidos label:before {
+	background-position: -128px 0;
+	width: 15px;
+	height: 17px;
+}
+div.menuitem.francia label:before {
+	background-position: -144px 0;
+	width: 15px;
+	height: 17px;
+}
+div.menuitem.grecia label:before {
+	background-position: -160px 0;
+	width: 15px;
+	height: 17px;
+}
+div.menuitem.holanda label:before {
+	background-position: -176px 0;
+	width: 15px;
+	height: 17px;
+}
+div.menuitem.méxico label:before {
+	background-position: -192px 0;
+	width: 15px;
+	height: 17px;
+}
+div.menuitem.nigeria label:before {
+	background-position: -208px 0;
+	width: 15px;
+	height: 17px;
+}
+div.menuitem.suiza label:before {
+	background-position: -224px 0;
+	width: 15px;
+	height: 17px;
+}
+div.menuitem.uruguay label:before {
+	background-position: -240px 0;
+	width: 15px;
+	height: 17px;
 }
