@@ -7,7 +7,7 @@ module.exports = function(grunt) {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
-      task: {
+      all: {
         files: [{
             expand: true,
             cwd: 'js/',
@@ -21,15 +21,40 @@ module.exports = function(grunt) {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
-      task: {
+      all: {
         expand: true,
         cwd: 'css/',
         src: ['*.css', '!*.min.css'],
         dest: 'css/',
         ext: '.min.css'
       }
+    },
+    sprite:{
+      all: {
+        src: 'image/t-shirts/*.png',
+        destImg: 'image/t-shirts_sprite.png',
+        destCSS: 'css/t-shirts.css',
+        algorithm: 'left-right',
+        padding: 1,
+        cssTemplate: 'image/t-shirts/css_template.mustache'
+      }
+    },
+    concat: {
+      options: {
+        separator: '\n',
+      },
+      all: {
+        src: ['css/style.css', 'css/t-shirts.css'],
+        dest: 'css/<%= pkg.name %>.css'
+      }
     }
   });
+
+  // Load in `grunt-spritesmith`
+  grunt.loadNpmTasks('grunt-spritesmith');
+
+  // Load in `grunt-contrib-concat`
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -38,6 +63,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Default task(s).
-  grunt.registerTask('default', ['cssmin','uglify']);
+  grunt.registerTask('default', ['sprite','concat','cssmin','uglify']);
 
 };
