@@ -304,7 +304,7 @@ queue()
       })
       .on({
         "mouseover": function(d) {
-          var thisTooltip = d3.select("#tooltip_stadium_" + d.name.replace(/\s|\(|\)/g, "_"))
+          var thisTooltip = d3.select("#tooltip_stadium_" + ((d.name) ? d.name.replace(/\s|\(|\)/g, "_") : ""))
             .classed("disabled", false);
           d3.select("g[id ^=tooltip_concentration]")
             .classed("disabled", function() {
@@ -319,14 +319,14 @@ queue()
                      }).totalDistance
                    });*/
 
-          d3.json("http://api.openweathermap.org/data/2.5/weather?lang=sp&units=metric&lat=" +
-            d.geometry.coordinates[1] + "&lon=" + d.geometry.coordinates[0], function(weather) {
-              thisTooltip.select(".temp.max")
-                .text("Temperatura max: " + Math.round(weather.main.temp_max) + "°C");
-            });
+          // d3.json("http://api.openweathermap.org/data/2.5/weather?lang=sp&units=metric&lat=" +
+          //   d.geometry.coordinates[1] + "&lon=" + d.geometry.coordinates[0], function(weather) {
+          //     thisTooltip.select(".temp.max")
+          //       .text("Temperatura max: " + Math.round(weather.main.temp_max) + "°C");
+          //   });
         },
         "mouseout": function(d) {
-          d3.select("#tooltip_stadium_" + d.name.replace(/\s|\(|\)/g, "_"))
+          d3.select("#tooltip_stadium_" + ((d.name) ? d.name.replace(/\s|\(|\)/g, "_") : ""))
             .classed("disabled", true);
           d3.select("g[id ^=tooltip_concentration]")
             .classed("disabled", false);
@@ -630,7 +630,6 @@ queue()
                                   return p;
                                 }).join(" / "),
                     match = d.team + "  vs.  " + opponents;
-                console.log(s.name,d.games, opponents)
                 containerbox.attr({
                   "width": Math.max(match.length * 5 + 6, boxWidth)
                 });
