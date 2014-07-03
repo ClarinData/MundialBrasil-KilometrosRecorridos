@@ -1,0 +1,690 @@
+/* KeyFrames */
+
+@keyframes blink {
+	from {
+		stroke-width: 1px;
+		stroke-opacity: .8;
+	}
+	to {
+		stroke-width: 40px;
+		stroke-opacity: 0;
+	}
+}
+
+@-webkit-keyframes blink { /* Safari and Chrome */
+	from {
+		stroke-width: 1px;
+		stroke-opacity: .8;
+	}
+	to {
+		stroke-width: 40px;
+		stroke-opacity: 0;
+	}
+}
+
+/* Webfonts */
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Bold.eot'); /* IE9 Compat Modes */
+    src: url('fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/Roboto-Bold.woff') format('woff'), /* Modern Browsers */
+         url('fonts/Roboto-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/Roboto-Bold.svg#Roboto-Bold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'RobotoCondensed';
+    src: url('fonts/RobotoCondensed-Regular.eot'); /* IE9 Compat Modes */
+    src: url('fonts/RobotoCondensed-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/RobotoCondensed-Regular.woff') format('woff'), /* Modern Browsers */
+         url('fonts/RobotoCondensed-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/RobotoCondensed-Regular.svg#RobotoCondensed-Regular') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'RobotoCondensedLight';
+    src: url('fonts/RobotoCondensed-Light.eot'); /* IE9 Compat Modes */
+    src: url('fonts/RobotoCondensed-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/RobotoCondensed-Light.woff') format('woff'), /* Modern Browsers */
+         url('fonts/RobotoCondensed-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/RobotoCondensed-Light.svg#RobotoCondensed-Light') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+article, section, #leftsidebar, hgroup, nav, header, footer, figure, figcaption { 
+    display: block;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#cierreMenu {
+	
+	margin-right:17px;
+	border-bottom: 1px #CCCCCC solid;
+}
+
+h1 {
+	font-family: RobotoCondensed;
+	font-size: 2.1em;	
+}
+
+#kmTot {
+	font-family: RobotoCondensed;
+	font-size: 0.96em;
+	padding-top: 0.7em;
+	border-top: 1px solid #CCCCCC;
+	text-transform: uppercase;
+	line-height:1.1em;
+}
+
+#elegi {
+	font-family: RobotoCondensed;
+	font-size: 0.96em;
+	padding-top: 0.7em;
+	padding-bottom: 2.7em;
+	margin-right:0.9em;
+	border-top: 1px solid #CCCCCC;
+	text-transform: uppercase;
+	line-height:1.1em;
+}
+
+
+#bajada {
+font-family: RobotoCondensed;
+font-size: 1.12em;
+font-weight: regular;
+margin-bottom: 0.7em;
+		
+}
+
+.referencias {
+	top:-5px;
+	position: relative;
+	bottom:10px;
+	margin-bottom:10px;
+	font-size:0.9em;
+	padding-right:20px;
+	display:inline;
+}
+
+
+#mapName {
+	font-size: 1.5em;
+	font-family: Roboto;
+	font-weight: bolder;
+	top: 27%;
+	left: 48%;
+	position: absolute;
+	opacity: .3;
+}
+
+img {
+    border: none;
+    
+}
+#wrapper {
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+}
+header {
+    height: 6.7em;
+}
+#leftsidebar {
+    width: 150pt;
+    height: 672px;
+    float: left;
+    border-right: dashed;
+    border-spacing: 1pt;
+    border-width: 1pt;
+    border-color: gray;
+    margin-right: 1em;
+}
+#rightsidebar {
+    width: 124pt;
+    height: 672px;
+    float: left;
+    border-left: dashed;
+    border-spacing: 1pt;
+    border-width: 1pt;
+    border-color: gray;
+    padding-left: 1em;
+}
+
+
+footer {
+	background: #cccccc;
+	font-family: robotoCondensed;
+	height: 18px;
+    width: 523px;
+    clear: both;
+}
+
+input[type=radio] {
+	float: right;
+	margin-top: 0.25em;
+	zindex: -1;
+}
+
+label {
+	float: none;
+	text-align: left;
+	vertical-align: baseline;
+	cursor:pointer;
+	cursor: hand; /* IE */
+}
+
+div.menuitem label:after {
+	width: 12pt;
+	height: 14pt;
+	margin-top: 2pt;
+	float: right;
+  	content: url(../image/radio_unchecked.svg);
+}
+
+
+
+div#teamActive.menuitem label:after {
+	width: 12pt;
+	height: 14pt;
+	margin-top: 2pt;
+	float: right;
+  	content: url(../image/radio_checked.svg);
+}
+
+
+.menuitem {
+	vertical-align:	middle;
+	background-color: #E6E6E6;
+	color: black;
+	border-left-width: 0;
+	/*margin-left: 0.5em;*/
+	padding-left: 0.5em;
+	text-transform: uppercase;
+	clear: both;
+	overflow: hidden;
+	cursor:pointer;
+}
+
+.menuitem.out {
+	text-decoration:line-through;
+	color:#808080;
+}
+
+div[class ^=Group] {
+	vertical-align:	middle;
+	font-size: 12pt;
+	font-family: RobotoCondensed;
+	border-color: white;
+	border-style: solid;
+	border-top-width: 0em;
+	border-bottom-width: 0.5em;
+	padding: 0 0 0 0;
+	margin-right: 1em;
+}
+
+
+
+div.GroupA {
+	background-color: #E6E6E6;
+	
+
+}
+
+div.GroupB label {
+	display:none;
+	
+}
+
+div.GroupB .menuitem {
+	background-color: white;
+		
+}
+	
+div.GroupC {
+	background-color: blue;
+}
+div.GroupD {
+	background-color: violet;
+}
+div.GroupE {
+	background-color: yellow;
+}
+div.GroupF {
+	background-color: brown;
+}
+div.GroupG {
+	background-color: orange;
+}
+div.GroupH {
+	background-color: purple;
+}
+
+.menuitem:hover {
+	background-color: gray;
+	color: white;
+}
+
+#teamActive {
+	background-color: black;
+	color: white;
+}
+
+.menuheader {
+	margin-bottom: 7pt;
+	font-size: 11pt;
+	font-weight: bold;
+	font-family: Roboto;
+	text-transform: none;
+}
+
+/*Map*/
+
+svg {
+	/*background: #fcfcfa;*/
+}
+
+.stroke {
+	fill: none;
+	stroke: #000;
+	stroke-width: 3px;
+	}
+
+.fill {
+	fill: #fff;	
+}
+
+.graticule {
+	fill: none;
+	stroke: black;
+	stroke-width: .5px;
+	stroke-opacity: .5;
+}
+
+.land {
+	fill: none;
+	stroke: white;
+	stroke-width: 1px;
+	/*fill-opacity: .5;*/
+}
+
+.boundary {
+	fill: none;
+	stroke: #fff;
+	stroke-width: .5px;
+}
+
+use.stadium.marker {
+	fill: red;
+/*	stroke: white;
+	stroke-width: 1px;*/
+	fill-opacity: .75;
+}
+
+use.concentration.marker {
+	fill:yellow;
+	stroke: grey;
+	stroke-width: .5px;
+	fill-opacity: .75;
+}
+
+use.concentration.marker.selected {
+	animation: blink 1s ease-out 0s infinite normal;
+	-webkit-animation: blink 1s ease-out 0s infinite normal;
+}
+
+.line[id ^=route] {
+	fill: none;
+	stroke: #3d9bb9;
+	stroke-width: 3px;
+	stroke-opacity: .8;
+}
+
+.precipitations {
+	/*opacity: .5;*/
+	display: none;
+}
+
+.temperature {
+	/*opacity: .5;*/
+	display: none;
+}
+
+#map {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#container {
+	width: 399pt;
+	height: 40em;
+	margin: 0 1em auto 0;
+	float: left;
+}
+
+.mask {
+	fill: black;
+	stroke: none;
+	stroke-width: 0;
+	fill-opacity: .5;
+}
+
+.disabled {
+	display: none;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.disable-hover,
+.disable-hover * {
+  pointer-events: none !important;
+}
+
+.over {
+	opacity: .95;
+}
+
+line.over {
+	fill: black !important;
+	stroke: grey !important;
+	stroke-linecap: round;
+	stroke-dasharray: 1, 5;
+}
+
+.tooltip.concentration .box {
+	fill: black;
+	fill-opacity: 0.6;
+	display: block;
+}
+
+.tooltip.concentration .team {
+	fill: #FFFFFF;
+	font-family: RobotoCondensed;
+	font-size: 10pt;
+	text-transform: uppercase;
+}
+
+.tooltip.concentration .city {
+	fill: #FFFFFF;
+	font-family: RobotoCondensedLight;
+	font-size: 9pt;
+}
+
+.tooltip.concentration .type {
+	fill: #B3B3B3;
+	font-family: RobotoCondensedLight;
+	font-size: 9pt;
+	text-transform: uppercase;
+}
+
+.tooltip.concentration .line {
+	stroke: black;
+	stroke-opacity: 0.6;
+	stroke-width: 2px;
+}
+
+.tooltip.stadium .box {
+	fill: white;
+	fill-opacity: 0.5;
+	stroke: gray;
+	stroke-opacity: 0.5;
+	stroke-width: 1px;
+	display: block;
+}
+
+.tooltip.stadium .line {
+	stroke: black;
+	stroke-opacity: 0.5;
+	stroke-width: 1px;
+}
+
+.tooltip.stadium .stadium {
+	fill: black;
+	font-family: RobotoCondensed;
+	font-size: 10pt;
+	/*text-transform: uppercase;*/
+	font-weight:bold;
+}
+
+.tooltip.stadium .opponent {
+	fill: black;
+	font-family: RobotoCondensed;
+	font-size: 8pt;
+	text-transform: uppercase;
+}
+
+.tooltip.stadium .temp {
+	fill: black;
+	font-family: RobotoCondensed;
+	font-size: 9.5pt;
+	text-transform: uppercase;
+}
+
+
+.tooltip.stadium .distance {
+	fill: white;
+	font-family: RobotoCondensed;
+	font-size: 9pt;
+	text-transform: uppercase;
+}
+
+.tooltip.stadium .box.distance {
+	fill: black;
+	fill-opacity: 0.5;
+	stroke: none;
+	display: block;
+}
+
+.bar {
+	position: relative;
+	display: block;
+	float: left;
+	width: 38%;
+}
+
+.axis {
+	shape-rendering: crispEdges;
+	display: block;
+	float: left;
+	width: calc(100% + 2em);
+	font-family: RobotoCondensed;
+	font-size: 8pt;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+.axis path {
+	display: none;
+}
+
+.axis line {
+	stroke: gray;
+	stroke-opacity: 0.5;
+	stroke-width: 1px;
+	stroke-dasharray: 2, 2;
+}
+
+#barAxis {
+	height: 100%;
+}
+
+#bar1 {
+	fill: #00ACE4;
+	stroke: none;
+	height: 100%;
+	margin-left: calc(-100% - 1.5em);
+}
+
+#bar2 {
+	fill: gray;
+	stroke: none;
+	height: 100%;
+	margin-left: calc(-90% + 1.5em);
+}
+
+.bar_title {
+	font-family: Roboto;
+	font-size: 8pt;
+	text-anchor: middle;
+}
+
+.bar_details {
+	font-family: RobotoCondensed;
+	font-size: 10pt;
+	fill: black;
+	text-anchor: middle;
+}
+
+.bar_line {
+	opacity: 0.5;
+}
+
+.bar_icon {
+	fill: black;
+}
+
+/* T_Shitrs sprite made by grunt-spritesmith */
+
+div.menuitem label:before {
+	float: left;
+	width: 12pt;
+	height: 14pt;
+	margin-top: 1px;
+	margin-right:10px;
+	margin-bottom:1px;
+	content: ' ';
+}
+
+div.menuitem.alemania label:before {
+	background: url(../image/t-shirts_sprite.png);
+	background-position: -16px 0px;
+	width: 15px;
+	height: 17px;
+}
+
+div.menuitem.argelia label:before {
+	background: url(../image/t-shirts_sprite.png);
+	background-position: -128px 0px;
+	width: 15px;
+	height: 17px;
+}
+
+div.menuitem.argentina label:before {
+	background: url(../image/t-shirts_sprite.png);
+	background-position: -32px 0px;
+	width: 15px;
+	height: 17px;
+}
+
+div.menuitem.brasil label:before {
+	background: url(../image/t-shirts_sprite.png);
+	background-position: -48px 0px;
+	width: 15px;
+	height: 17px;
+}
+
+div.menuitem.bélgica label:before {
+	background: url(../image/t-shirts_sprite.png);
+	background-position: -64px 0px;
+	width: 15px;
+	height: 17px;
+}
+
+div.menuitem.chile label:before {
+	background: url(../image/t-shirts_sprite.png);
+	background-position: -80px 0px;
+	width: 15px;
+	height: 17px;
+}
+
+div.menuitem.colombia label:before {
+	background: url(../image/t-shirts_sprite.png);
+	background-position: -96px 0px;
+	width: 15px;
+	height: 17px;
+}
+
+div.menuitem.costa_rica label:before {
+	background: url(../image/t-shirts_sprite.png);
+	background-position: -112px 0px;
+	width: 15px;
+	height: 17px;
+}
+
+div.menuitem.estados_unidos label:before {
+	background: url(../image/t-shirts_sprite.png);
+	background-position: 0px 0px;
+	width: 15px;
+	height: 17px;
+}
+
+div.menuitem.francia label:before {
+	background: url(../image/t-shirts_sprite.png);
+	background-position: -144px 0px;
+	width: 15px;
+	height: 17px;
+}
+
+div.menuitem.grecia label:before {
+	background: url(../image/t-shirts_sprite.png);
+	background-position: -160px 0px;
+	width: 15px;
+	height: 17px;
+}
+
+div.menuitem.holanda label:before {
+	background: url(../image/t-shirts_sprite.png);
+	background-position: -176px 0px;
+	width: 15px;
+	height: 17px;
+}
+
+div.menuitem.méxico label:before {
+	background: url(../image/t-shirts_sprite.png);
+	background-position: -192px 0px;
+	width: 15px;
+	height: 17px;
+}
+
+div.menuitem.nigeria label:before {
+	background: url(../image/t-shirts_sprite.png);
+	background-position: -208px 0px;
+	width: 15px;
+	height: 17px;
+}
+
+div.menuitem.suiza label:before {
+	background: url(../image/t-shirts_sprite.png);
+	background-position: -224px 0px;
+	width: 15px;
+	height: 17px;
+}
+
+div.menuitem.uruguay label:before {
+	background: url(../image/t-shirts_sprite.png);
+	background-position: -240px 0px;
+	width: 15px;
+	height: 17px;
+}
+
