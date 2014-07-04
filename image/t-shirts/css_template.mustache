@@ -1,7 +1,4 @@
-{
-  // Default options
-  'separator': '\n'
-}
+
 
 
 /* T_Shitrs sprite made by grunt-spritesmith */
@@ -10,15 +7,15 @@ div.menuitem label:before {
 	float: left;
 	width: 12pt;
 	height: 14pt;
-	margin-top: 1px;
+	margin-top: 2px;
 	margin-right:10px;
 	margin-bottom:1px;
 	content: ' ';
+	background: url({{#items.0}}{{{image}}}{{/items.0}});
 }
 
 {{#items}}
 div.menuitem.{{name}} label:before {
-	background: url({{{escaped_image}}});
 	background-position: {{px.offset_x}} {{px.offset_y}};
 	width: {{px.width}};
 	height: {{px.total_height}};
