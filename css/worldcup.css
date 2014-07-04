@@ -75,6 +75,11 @@ body {
     height: 100%;
 }
 
+#menu {
+	position:absolute;
+	bottom:0;
+}
+
 #cierreMenu {
 	
 	margin-right:17px;
@@ -99,7 +104,7 @@ h1 {
 	font-family: RobotoCondensed;
 	font-size: 0.96em;
 	padding-top: 0.7em;
-	padding-bottom: 2.7em;
+	padding-bottom: 1.7em;
 	margin-right:0.9em;
 	border-top: 1px solid #CCCCCC;
 	text-transform: uppercase;
@@ -157,6 +162,7 @@ header {
     border-width: 1pt;
     border-color: gray;
     margin-right: 1em;
+    position: relative;
 }
 #rightsidebar {
     width: 124pt;
@@ -570,119 +576,104 @@ div.menuitem label:before {
 	float: left;
 	width: 12pt;
 	height: 14pt;
-	margin-top: 1px;
+	margin-top: 2px;
 	margin-right:10px;
 	margin-bottom:1px;
 	content: ' ';
+	background: url(../image/t-shirts_sprite.png);
 }
 
 div.menuitem.alemania label:before {
-	background: url(../image/t-shirts_sprite.png);
 	background-position: -16px 0px;
 	width: 15px;
 	height: 17px;
 }
 
 div.menuitem.argelia label:before {
-	background: url(../image/t-shirts_sprite.png);
 	background-position: -128px 0px;
 	width: 15px;
 	height: 17px;
 }
 
 div.menuitem.argentina label:before {
-	background: url(../image/t-shirts_sprite.png);
 	background-position: -32px 0px;
 	width: 15px;
 	height: 17px;
 }
 
 div.menuitem.brasil label:before {
-	background: url(../image/t-shirts_sprite.png);
 	background-position: -48px 0px;
 	width: 15px;
 	height: 17px;
 }
 
 div.menuitem.bélgica label:before {
-	background: url(../image/t-shirts_sprite.png);
 	background-position: -64px 0px;
 	width: 15px;
 	height: 17px;
 }
 
 div.menuitem.chile label:before {
-	background: url(../image/t-shirts_sprite.png);
 	background-position: -80px 0px;
 	width: 15px;
 	height: 17px;
 }
 
 div.menuitem.colombia label:before {
-	background: url(../image/t-shirts_sprite.png);
 	background-position: -96px 0px;
 	width: 15px;
 	height: 17px;
 }
 
 div.menuitem.costa_rica label:before {
-	background: url(../image/t-shirts_sprite.png);
 	background-position: -112px 0px;
 	width: 15px;
 	height: 17px;
 }
 
 div.menuitem.estados_unidos label:before {
-	background: url(../image/t-shirts_sprite.png);
 	background-position: 0px 0px;
 	width: 15px;
 	height: 17px;
 }
 
 div.menuitem.francia label:before {
-	background: url(../image/t-shirts_sprite.png);
 	background-position: -144px 0px;
 	width: 15px;
 	height: 17px;
 }
 
 div.menuitem.grecia label:before {
-	background: url(../image/t-shirts_sprite.png);
 	background-position: -160px 0px;
 	width: 15px;
 	height: 17px;
 }
 
 div.menuitem.holanda label:before {
-	background: url(../image/t-shirts_sprite.png);
 	background-position: -176px 0px;
 	width: 15px;
 	height: 17px;
 }
 
 div.menuitem.méxico label:before {
-	background: url(../image/t-shirts_sprite.png);
 	background-position: -192px 0px;
 	width: 15px;
 	height: 17px;
 }
 
 div.menuitem.nigeria label:before {
-	background: url(../image/t-shirts_sprite.png);
 	background-position: -208px 0px;
 	width: 15px;
 	height: 17px;
 }
 
 div.menuitem.suiza label:before {
-	background: url(../image/t-shirts_sprite.png);
 	background-position: -224px 0px;
 	width: 15px;
 	height: 17px;
 }
 
 div.menuitem.uruguay label:before {
-	background: url(../image/t-shirts_sprite.png);
 	background-position: -240px 0px;
 	width: 15px;
 	height: 17px;
