@@ -75,6 +75,11 @@ body {
     height: 100%;
 }
 
+#menu {
+	position:absolute;
+	bottom:0;
+}
+
 #cierreMenu {
 	
 	margin-right:17px;
@@ -99,7 +104,7 @@ h1 {
 	font-family: RobotoCondensed;
 	font-size: 0.96em;
 	padding-top: 0.7em;
-	padding-bottom: 2.7em;
+	padding-bottom: 1.7em;
 	margin-right:0.9em;
 	border-top: 1px solid #CCCCCC;
 	text-transform: uppercase;
@@ -157,6 +162,7 @@ header {
     border-width: 1pt;
     border-color: gray;
     margin-right: 1em;
+    position: relative;
 }
 #rightsidebar {
     width: 124pt;
