@@ -215,10 +215,12 @@ queue()
         "width": Math.round(tiles.scale),
         "height": Math.round(tiles.scale),
         "x": function(d) {
-          return Math.round((d[0] + tiles.translate[0]) * tiles.scale);
+          var x = Math.round((d[0] + tiles.translate[0]) * tiles.scale);
+          return (x+(13-d[0]));
         },
         "y": function(d) {
-          return Math.round((d[1] + tiles.translate[1]) * tiles.scale);
+          var y = Math.round((d[1] + tiles.translate[1]) * tiles.scale);
+          return (y+(16-d[1]));
         }
       });
     // // OpenWheather Tiles
