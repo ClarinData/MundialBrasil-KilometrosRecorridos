@@ -40,9 +40,6 @@ module.exports = function(grunt) {
       }
     },
     concat: {
-      options: {
-        separator: '\n',
-      },
       all: {
         src: ['css/style.css', 'css/t-shirts.css'],
         dest: 'css/<%= pkg.name %>.css'
